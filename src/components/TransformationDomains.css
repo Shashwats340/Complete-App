@@ -1,0 +1,156 @@
+.domains-section {
+    padding: 4rem 5% 100px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.domains-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 3rem;
+    font-family: inherit;
+}
+
+/* Grid Layout */
+.domains-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 1fr;
+    grid-template-rows: min-content min-content;
+    gap: 1.25rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.domain-card {
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    color: #FFFFFF;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.domain-card::after {
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border: 55px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    bottom: -150px;
+    right: -100px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.domain-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.domain-card-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    line-height: 1.25;
+    position: relative;
+    z-index: 2;
+}
+
+.domain-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.85;
+    position: relative;
+    z-index: 2;
+}
+
+/* Individual Cards Layout and colors */
+.domain-card-1 {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #206ab6;
+}
+
+.domain-card-2 {
+    grid-column: 2;
+    grid-row: 1;
+    background: linear-gradient(135deg, #185295, #123e75);
+    min-height: 220px;
+}
+
+.domain-card-3 {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    background-color: #1060b8;
+    padding: 2.5rem;
+}
+
+.domain-card-4 {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #1e6acc;
+}
+
+.domain-card-5 {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: #172c57;
+    min-height: 220px;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+    .domains-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .domain-card-1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .domain-card-2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .domain-card-4 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .domain-card-5 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .domain-card-3 {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .domains-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .domain-card-1,
+    .domain-card-2,
+    .domain-card-3,
+    .domain-card-4,
+    .domain-card-5 {
+        grid-column: 1;
+        grid-row: auto;
+        min-height: auto;
+        justify-content: flex-start;
+    }
+}

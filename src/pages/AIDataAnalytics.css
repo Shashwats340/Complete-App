@@ -1,0 +1,681 @@
+/* AI & Data Analytics Hero Section */
+.aidata-hero-section {
+    position: relative;
+    min-height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../assets/bg.img.png') no-repeat center center;
+    background-size: cover;
+    color: #FFFFFF;
+    margin-top: 0;
+    padding: 0 5%;
+    overflow: hidden;
+}
+
+.aidata-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.aidata-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    /* Offset for navbar */
+}
+
+.aidata-hero-content .hero-eyebrow {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+.aidata-hero-content .hero-headline {
+    font-size: 2.25rem;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.aidata-hero-content .hero-subheadline {
+    font-size: 1.1rem;
+    color: #E2E8F0;
+    line-height: 1.6;
+    max-width: 800px;
+    font-weight: 400;
+    margin: 0 auto 0;
+}
+
+.aidata-hero-content .hero-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #FFFFFF;
+    color: #111827;
+    /* Dark almost black text */
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    /* Pill shape */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.aidata-hero-content .hero-cta-button:hover {
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.aidata-hero-content .cta-icon {
+    transition: transform 0.2s ease;
+    stroke-width: 2.5px;
+}
+
+.aidata-hero-content .hero-cta-button:hover .cta-icon {
+    transform: translate(3px, -3px);
+}
+
+/* Business Problems We Solve Section */
+.business-problems-section {
+    padding: 6rem 5%;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.business-problems-header {
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+}
+
+.problems-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    /* Dark black/gray */
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.problems-subtitle {
+    font-size: 1.1rem;
+    color: #4B5563;
+    line-height: 1.7;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 2x2 Grid Layout */
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    /* Constrain width for better reading length on cards */
+    margin: 0 auto;
+}
+
+.problem-card {
+    background-color: #FFFFFF;
+    /* Soft light blue border, subtle rounding */
+    border: 1px solid #E0E7FF;
+    border-radius: 16px;
+    padding: 2.5rem 2.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    /* Very faint drop shadow, mostly relies on border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.problem-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    /* Stronger shadow on hover */
+    border-color: #BFDBFE;
+    /* Slightly darker border on hover */
+}
+
+/* White box shadow icon container */
+.problem-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    /* Shadow specifically around the white icon box */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #F3F4F6;
+}
+
+.problem-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 1rem 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.problem-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4B5563;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+    .aidata-hero-content {
+        padding-top: 2rem;
+    }
+
+    .hero-headline {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .problems-grid {
+        grid-template-columns: 1fr;
+        /* Stack on mobile */
+    }
+
+    .hero-headline {
+        font-size: 2rem;
+    }
+
+    .hero-eyebrow {
+        font-size: 1.25rem;
+    }
+
+    .hero-subheadline {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-cta-button-solid,
+    .hero-cta-button-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .problems-title {
+        font-size: 2rem;
+    }
+}
+
+/* Capabilities List Layout Specifics */
+.capabilities-list-container {
+    display: flex;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.capabilities-vertical-divider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #D1D5DB;
+    /* Light gray line */
+}
+
+.capabilities-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.capability-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #E5E7EB;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.2s ease;
+}
+
+.capability-item:last-child {
+    border-bottom: none;
+}
+
+.capability-item:hover {
+    color: #2563EB;
+    /* Brand blue on hover */
+}
+
+@media (max-width: 768px) {
+    .capabilities-list-container {
+        padding-left: 0;
+    }
+
+    .capabilities-vertical-divider {
+        display: none;
+    }
+}
+
+/* BI & Data Visualization Section */
+.aibi-data-section {
+    padding: 6rem 5%;
+    background-color: #FFFFFF;
+    /* Solid white background, no grid */
+    position: relative;
+}
+
+.aibi-data-header {
+    max-width: 1000px;
+    margin: 0 auto 4rem auto;
+    text-align: left;
+    /* Left align matching design */
+}
+
+.aibi-data-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #014C97;
+    /* Brand blue */
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.aibi-data-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4B5563;
+    /* Dark gray */
+    font-family: 'Poppins', sans-serif;
+    max-width: 800px;
+}
+
+/* 4 Card Grid Layout */
+.aibi-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.aibi-card {
+    /* IT Services home page gradient */
+    background: linear-gradient(135deg, #014C97 0%, #2D7BE8 50%, #3599FC 100%);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(1, 76, 151, 0.15);
+}
+
+.aibi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(1, 76, 151, 0.25);
+}
+
+.aibi-icon-wrapper {
+    margin-bottom: 2rem;
+    display: inline-flex;
+}
+
+/* Neon Glow Effect for Icons */
+.aibi-icon {
+    color: #00FFFF;
+    /* Bright cyan/neon blue */
+    filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.8));
+}
+
+.aibi-card-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.3;
+    min-height: 3.9rem;
+    /* Align titles roughly */
+}
+
+.aibi-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* Responsive adjustments for BI & Data section */
+@media (max-width: 1200px) {
+    .aibi-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .aibi-card-title {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .aibi-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aibi-data-header {
+        text-align: center;
+    }
+
+    .aibi-data-subtitle {
+        margin: 0 auto;
+    }
+
+    .aibi-data-title {
+        font-size: 2rem;
+    }
+}
+
+/* A/B Testing & Experimentation Section */
+.ai-ab-testing-section {
+    padding: 4.5rem 5%;
+    /* Dark deep blue gradient matching the image */
+    background: linear-gradient(135deg, #1A69B5 0%, #003B82 100%);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.ai-ab-testing-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.ai-ab-testing-header {
+    max-width: 900px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.ai-ab-testing-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+}
+
+.ai-ab-testing-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.ai-ab-features-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.ai-ab-feature-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+    /* Faint vertical dividing line on right side */
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ai-ab-feature-item:last-child {
+    border-right: none;
+}
+
+.ai-ab-feature-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ai-ab-feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.3;
+}
+
+.ai-ab-feature-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Poppins', sans-serif;
+    max-width: 250px;
+}
+
+/* Responsive adjustments for A/B Testing section */
+@media (max-width: 1024px) {
+    .ai-ab-features-grid {
+        flex-wrap: wrap;
+        row-gap: 4rem;
+    }
+
+    .ai-ab-feature-item {
+        flex: 0 0 50%;
+        border-right: none;
+    }
+
+    /* Add borders back appropriately for 2x2 grid */
+    .ai-ab-feature-item:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .ai-ab-testing-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-ab-features-grid {
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .ai-ab-feature-item {
+        flex: 0 0 100%;
+        border-right: none;
+        padding: 0;
+    }
+
+    .ai-ab-feature-item:nth-child(odd) {
+        border-right: none;
+    }
+
+    .ai-ab-testing-title {
+        font-size: 2rem;
+    }
+}
+
+/* Data Engineering & Architecture Section */
+.ai-dataeng-section {
+    padding: 6rem 5% 2rem 5%;
+    /* Reduced bottom padding */
+    background-color: #FFFFFF;
+}
+
+.ai-dataeng-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+}
+
+.ai-dataeng-left {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.ai-dataeng-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #014C97;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.3;
+}
+
+.ai-dataeng-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4B5563;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ai-dataeng-right {
+    flex: 1;
+    padding-left: 4rem;
+    border-left: 1px solid #D1D5DB;
+    /* Vertical divider */
+}
+
+.ai-dataeng-subtitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ai-dataeng-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.ai-dataeng-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #E5E7EB;
+    /* Horizontal divider for items */
+}
+
+.ai-dataeng-item:first-child {
+    padding-top: 0;
+}
+
+.ai-dataeng-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.ai-dataeng-item-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #014C97;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ai-dataeng-item-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #4B5563;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Data Management & Governance Section */
+.ai-datagov-section {
+    padding: 2rem 5% 6rem 5%;
+    /* Reduced top padding */
+    background-color: #FFFFFF;
+    /* No grid, solid white */
+}
+
+.ai-datagov-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+}
+
+.ai-datagov-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333333;
+    /* Dark gray/black matching design */
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ai-datagov-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4B5563;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive adjustments for Engineering & Governance sections */
+@media (max-width: 992px) {
+    .ai-dataeng-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .ai-dataeng-left {
+        padding-right: 0;
+    }
+
+    .ai-dataeng-right {
+        padding-left: 0;
+        border-left: none;
+        /* Remove vertical divider on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .ai-dataeng-title,
+    .ai-datagov-title {
+        font-size: 2rem;
+    }
+
+    .ai-dataeng-subtitle {
+        font-size: 1.5rem;
+    }
+}

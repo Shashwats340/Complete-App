@@ -1,0 +1,241 @@
+.ent-tech-section {
+    padding: 4rem 5% 6rem;
+    background-color: #F9FAFB;
+    /* Light gray background, no grid per user request */
+    text-align: center;
+}
+
+.ent-tech-header {
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
+.ent-tech-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ent-tech-subtitle {
+    font-size: 1.1rem;
+    color: #4B5563;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ent-tech-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-align: left;
+}
+
+.ent-tech-sidebar {
+    width: 320px;
+    background-color: #FFFFFF;
+    border-right: 1px solid #E5E7EB;
+    display: flex;
+    flex-direction: column;
+}
+
+.ent-tech-tab {
+    padding: 1.5rem 2rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #E5E7EB;
+    text-align: left;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #111827;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ent-tech-tab:last-child {
+    border-bottom: none;
+}
+
+.ent-tech-tab:hover:not(.active) {
+    background-color: #F3F4F6;
+}
+
+.ent-tech-tab.active {
+    background: linear-gradient(135deg, #1A69B5 0%, #003B82 100%);
+    color: #FFFFFF;
+    border-top-left-radius: 8px;
+    /* Optional slight styling match for active */
+    border-bottom-left-radius: 8px;
+}
+
+.ent-tech-content {
+    flex: 1;
+    padding: 3rem 4rem;
+}
+
+.ent-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.ent-tech-item-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    height: 90px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.ent-tech-item-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.ent-tech-item-logo:hover {
+    transform: translateY(-5px);
+}
+
+.ent-tech-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.ent-tech-section-group {
+    text-align: left;
+}
+
+.ent-tech-subheader {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ent-tech-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ent-tech-item-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1A69B5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 3rem;
+}
+
+.text-row .ent-tech-item-text {
+    position: relative;
+    padding-right: 1.5rem;
+}
+
+.text-row .ent-tech-item-text::after {
+    content: '|';
+    position: absolute;
+    right: -1.5rem;
+    color: #E5E7EB;
+}
+
+.text-row .ent-tech-item-text:last-child::after {
+    content: none;
+}
+
+.logos-row {
+    margin-top: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .ent-tech-sidebar {
+        width: 260px;
+    }
+
+    .ent-tech-content {
+        padding: 2rem;
+    }
+
+    .ent-tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .logos-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .ent-tech-container {
+        flex-direction: column;
+    }
+
+    .ent-tech-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #E5E7EB;
+        flex-direction: row;
+        overflow-x: auto;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .ent-tech-sidebar::-webkit-scrollbar {
+        display: none; /* Chrome, Safari and Opera */
+    }
+
+    .ent-tech-tab {
+        flex: 1;
+        text-align: center;
+        padding: 1rem;
+        border-bottom: none;
+        white-space: nowrap;
+    }
+
+    .ent-tech-tab.active {
+        border-radius: 0;
+    }
+
+    .ent-tech-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .ent-tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .logos-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ent-tech-item-logo {
+        height: 80px; /* Increased from 60px to match desktop scale better */
+        padding: 0.5rem;
+    }
+
+    .ent-tech-subheader {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+}

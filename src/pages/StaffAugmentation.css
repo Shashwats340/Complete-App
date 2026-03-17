@@ -1,0 +1,471 @@
+/* StaffAugmentation.css */
+.staff-augmentation-page {
+    font-family: 'Poppins', sans-serif;
+}
+
+.staff-hero-section {
+    position: relative;
+    min-height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../assets/bg.img.png') no-repeat center center;
+    background-size: cover;
+    color: #FFFFFF;
+    margin-top: 0;
+    padding: 0 5%;
+    overflow: hidden;
+}
+
+.staff-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.staff-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    /* Offset for navbar */
+}
+
+.staff-hero-content .hero-eyebrow {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+.staff-hero-content .hero-headline {
+    font-size: 2.25rem;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.staff-hero-content .hero-subheadline {
+    font-size: 1.1rem;
+    color: #E2E8F0;
+    line-height: 1.6;
+    max-width: 800px;
+    font-weight: 400;
+    margin: 0 auto 0;
+}
+
+.staff-hero-content .hero-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #FFFFFF;
+    color: #111827;
+    /* Dark almost black text */
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    /* Pill shape */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.staff-hero-content .hero-cta-button:hover {
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.staff-hero-content .cta-icon {
+    transition: transform 0.2s ease;
+    stroke-width: 2.5px;
+}
+
+.staff-hero-content .hero-cta-button:hover .cta-icon {
+    transform: translate(3px, -3px);
+}
+
+@media (max-width: 768px) {
+    .staff-hero-content .hero-headline {
+        font-size: 2.5rem;
+    }
+
+    .staff-hero-content .hero-eyebrow {
+        font-size: 1.25rem;
+    }
+}
+
+/* Experts Section */
+.staff-experts-section {
+    padding: 2rem 5%;
+    background-color: #F8FAFC;
+    /* Light gray background to distinguish */
+    text-align: center;
+    overflow: hidden;
+    /* Prevent page scroll */
+}
+
+.staff-experts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.staff-header-content {
+    max-width: 800px;
+}
+
+.staff-header-content .staff-section-title {
+    margin-bottom: 0.5rem;
+    color: #2563EB;
+    /* Match 'How it works?' color */
+}
+
+.staff-header-content .staff-section-subtitle {
+    margin: 0;
+    text-align: left;
+    max-width: 100%;
+}
+
+.staff-header-controls {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    /* Align visually with text */
+}
+
+.staff-scroll-btn {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid #1F2937;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #1F2937;
+}
+
+.staff-scroll-btn:hover {
+    background-color: #1F2937;
+    color: #FFFFFF;
+}
+
+.staff-section-divider {
+    height: 1px;
+    background-color: #CBD5E1;
+    max-width: 1400px;
+    margin: 0 auto 1rem;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .staff-experts-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .staff-header-controls {
+        align-self: flex-end;
+    }
+}
+
+.staff-experts-grid {
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 0;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.experts-track {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+.experts-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 1rem));
+    }
+}
+
+.staff-expert-card {
+    background: linear-gradient(135deg, #014C97 0%, #2D7BE8 50%, #3599FC 100%);
+    /* Same as Home page cards */
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    /* Match Services.css padding */
+    text-align: left;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 380px;
+    /* Fixed height for absolute uniformity */
+    width: 320px;
+    /* Fixed width matching Frontend Engineering */
+    /* Approximate width of home page cards */
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    /* Match Services.css shadow */
+}
+
+.staff-expert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 50, 150, 0.3);
+}
+
+.staff-expert-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: none;
+    filter: none;
+    /* Remove glowing effect */
+}
+
+.staff-expert-icon svg {
+    width: 24px;
+    /* Reduced to match Services.css icon size */
+    height: 24px;
+    stroke-width: 1.5;
+}
+
+.staff-expert-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    /* Match Services.css font size */
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.staff-expert-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: auto;
+    /* Force 2 lines tall approx to keep cards even */
+    min-height: 4.2rem;
+    align-content: flex-start;
+}
+
+.staff-expert-tag {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 2rem;
+    background-color: transparent;
+    color: #FFFFFF;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+    font-weight: normal;
+}
+
+.staff-expert-tag:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+    .staff-expert-card {
+        min-width: calc(33.333% - 1.33rem);
+        /* 3 cards */
+    }
+}
+
+@media (max-width: 900px) {
+    .staff-expert-card {
+        min-width: calc(50% - 1rem);
+        /* 2 cards */
+    }
+}
+
+@media (max-width: 768px) {
+    .staff-expert-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .staff-expert-card {
+        min-width: 85%;
+        /* 1 card partially visible */
+    }
+}
+
+/* Why Choose Connexials Section */
+.staff-why-section {
+    padding: 2rem 5% 6rem;
+    /* Reduced top padding */
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.staff-why-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.staff-why-header {
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.staff-why-header .staff-section-title {
+    color: #000000;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.staff-why-header .staff-section-subtitle {
+    color: #4B5563;
+    max-width: 100%;
+}
+
+.staff-why-grid-container {
+    background: #FAFAFA;
+    /* Very light gray background */
+    border: 1px solid #DDF2FF;
+    /* Soft light blue border */
+    border-radius: 1rem;
+    padding: 1.5rem 1.5rem;
+    color: #000000;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.staff-why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+}
+
+.staff-why-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+/* Add inner grid borders */
+.staff-why-item:nth-child(1),
+.staff-why-item:nth-child(2) {
+    border-right: 1px solid #DDF2FF;
+    border-bottom: 1px solid #DDF2FF;
+}
+
+.staff-why-item:nth-child(3) {
+    border-bottom: 1px solid #DDF2FF;
+}
+
+.staff-why-item:nth-child(4),
+.staff-why-item:nth-child(5) {
+    border-right: 1px solid #DDF2FF;
+}
+
+.staff-why-item h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #0056B3;
+    /* Darker blue color for numbers */
+}
+
+.staff-why-item p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555555;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .staff-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Reset and reapply borders for 2 columns */
+    .staff-why-item {
+        border: none !important;
+    }
+
+    .staff-why-item:nth-child(odd) {
+        border-right: 1px solid #DDF2FF !important;
+    }
+
+    .staff-why-item:nth-child(1),
+    .staff-why-item:nth-child(2),
+    .staff-why-item:nth-child(3),
+    .staff-why-item:nth-child(4) {
+        border-bottom: 1px solid #DDF2FF !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .staff-why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reset and reapply borders for 1 column */
+    .staff-why-item {
+        border: none !important;
+    }
+
+    .staff-why-item:not(:last-child) {
+        border-bottom: 1px solid #DDF2FF !important;
+    }
+}

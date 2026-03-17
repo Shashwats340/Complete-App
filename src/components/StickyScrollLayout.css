@@ -1,0 +1,61 @@
+/* Sticky Scroll Layout Styles */
+.sticky-scroll-section {
+    padding: 6rem 5%;
+    background-color: #FFFFFF;
+}
+
+.sticky-scroll-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 4rem;
+    position: relative;
+    align-items: flex-start;
+    /* Critical for sticky to work */
+}
+
+.sticky-scroll-left {
+    flex: 1;
+    position: sticky;
+    top: 15rem;
+    /* Adjust based on navbar height, roughly */
+    align-self: flex-start;
+    padding-right: 2rem;
+}
+
+.sticky-scroll-right {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Left side content styles */
+.sticky-scroll-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2563EB;
+    /* Main accent color */
+    margin-bottom: 1rem;
+}
+
+.sticky-scroll-subtitle {
+    font-size: 1.125rem;
+    color: #4B5563;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .sticky-scroll-container {
+        flex-direction: column;
+    }
+
+    .sticky-scroll-left {
+        position: static;
+        margin-bottom: 3rem;
+    }
+
+    .sticky-scroll-right {
+        width: 100%;
+    }
+}

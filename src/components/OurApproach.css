@@ -1,0 +1,105 @@
+.our-approach-section {
+    padding: 1rem 5% 5rem 5%;
+    /* Reduced top padding */
+    background-color: #F9FAFB;
+    /* Assuming subtle grey based on the bg behind "Our Approach" in typical sections, testing this */
+}
+
+.our-approach-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.our-approach-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 2.5rem;
+    /* Reduced bottom margin too to tighten it up visually */
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.approach-card {
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #FFFFFF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.approach-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Background Gradients to match the screenshot */
+.card-light-blue {
+    background: linear-gradient(135deg, #0088FF, #0077EE);
+}
+
+.card-mid-blue {
+    background: linear-gradient(135deg, #0B66C6, #0A5BB2);
+}
+
+.card-dark-blue-1 {
+    background: linear-gradient(135deg, #0959B0, #063973);
+}
+
+.card-dark-blue-2 {
+    background: linear-gradient(135deg, #0850A2, #042E5E);
+}
+
+.approach-icon-wrapper {
+    background-color: #FFFFFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.approach-icon {
+    /* To represent the gear/code icon in the image */
+    color: #0A5BB2;
+}
+
+.approach-card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.approach-card-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+    .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+}

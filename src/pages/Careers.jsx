@@ -1,0 +1,200 @@
+import React, { useRef, useState, useEffect } from 'react';
+import Hero from '../components/Hero';
+import { MapPin, Clock, Briefcase, ChevronRight, ChevronLeft, CloudUpload } from 'lucide-react';
+import './Careers.css';
+import { fetchFromStrapi } from '../services/api';
+
+const Careers = () => {
+    const scrollRef = useRef(null);
+    const [jobs, setJobs] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const loadJobs = async () => {
+            try {
+                const data = await fetchFromStrapi('jobs');
+                if (data) {
+                    setJobs(data);
+                }
+            } catch (error) {
+                console.error("Failed to load jobs:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        loadJobs();
+    }, []);
+
+    const scroll = (direction) => {
+        if (scrollRef.current) {
+            const { current } = scrollRef;
+            const scrollAmount = 400; // Adjust scroll distance as needed
+            if (direction === 'left') {
+                current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    };
+
+    const teamImages = [
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+    ];
+
+    return (
+        <div className="careers-page">
+            <Hero
+                eyebrow="Careers"
+                title="Build the technologies of tomorrow, today."
+                subtitle="At Connexials, we build systems that power enterprises and deliver lasting impact. We're engineers and problem-solvers who value quality, accountability, and real outcomes. If you take pride in your craft, you'll fit right in"
+                ctaText="View Openings"
+                ctaLink="#openings"
+            />
+
+            <section className="careers-benefits-section">
+                <div className="benefits-container">
+                    <div className="benefits-left">
+                        <h2 className="tech-benefits-title">Why Join<br />Connexials?</h2>
+                        <p className="tech-benefits-desc">
+                            We believe that great work happens when talented individuals feel supported,
+                            challenged, and empowered to grow.
+                        </p>
+                    </div>
+                    <div className="benefits-divider"></div>
+                    <div className="benefits-right">
+                        <div className="benefit-item">
+                            <h3 className="benefit-item-title">Work That Counts</h3>
+                            <p className="benefit-item-desc">
+                                You'll work on mission-critical platforms, AI systems, and enterprise
+                                applications used at scale — not experimental side projects that never ship.
+                            </p>
+                        </div>
+                        <div className="benefit-item">
+                            <h3 className="benefit-item-title">Ownership, Not Hierarchy</h3>
+                            <p className="benefit-item-desc">
+                                We operate with accountability. You'll be trusted to think, propose, build,
+                                and improve — not just execute tickets.
+                            </p>
+                        </div>
+                        <div className="benefit-item">
+                            <h3 className="benefit-item-title">Engineering Excellence</h3>
+                            <p className="benefit-item-desc">
+                                Clean architecture. Modern stacks. Thoughtful code reviews. Production discipline.
+                                We build things the right way.
+                            </p>
+                        </div>
+                        <div className="benefit-item">
+                            <h3 className="benefit-item-title">Continuous Growth</h3>
+                            <p className="benefit-item-desc">
+                                We invest in learning — certifications, emerging technologies, leadership development,
+                                and cross-functional exposure.
+                            </p>
+                        </div>
+                        <div className="benefit-item">
+                            <h3 className="benefit-item-title">Global Exposure</h3>
+                            <p className="benefit-item-desc">
+                                Collaborate with enterprise clients, high-growth firms, and cross-border teams
+                                solving complex problems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="jobs-section" id="openings">
+                <div className="jobs-container">
+                    {loading ? (
+                        <div className="loading">Loading open positions...</div>
+                    ) : jobs.length > 0 ? (
+                        jobs.map((job) => (
+                            <div key={job.id} className="job-card">
+                                <div className="job-info">
+                                    <h3 className="job-title">{job.title}</h3>
+                                    <div className="job-meta">
+                                        <span className="meta-item"><MapPin size={16} /> {job.location}</span>
+                                        <span className="meta-separator">|</span>
+                                        <span className="meta-item"><Clock size={16} /> {job.type}</span>
+                                        <span className="meta-separator">|</span>
+                                        <span className="meta-item"><Briefcase size={16} /> {job.department}</span>
+                                    </div>
+                                </div>
+                                <button className="view-job-btn">View Job</button>
+                            </div>
+                        ))
+                    ) : (
+                        <p className="no-jobs">No open positions at the moment. Please check back later or send a general application.</p>
+                    )}
+                </div>
+            </section>
+
+            {/* Teams & Culture Section */}
+            <section className="team-culture-section">
+                <div className="team-culture-container">
+                    <h2 className="section-title">Teams & Culture</h2>
+                    <div className="carousel-wrapper">
+                        <div className="team-carousel" ref={scrollRef}>
+                            {teamImages.map((img, index) => (
+                                <img key={index} src={img} alt={`Team ${index + 1}`} className="team-img" />
+                            ))}
+                        </div>
+                        <button className="carousel-arrow right" onClick={() => scroll('right')}>
+                            <ChevronRight />
+                        </button>
+                        <button className="carousel-arrow left" onClick={() => scroll('left')}>
+                            <ChevronLeft />
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* General Application Section */}
+            <section className="general-app-section">
+                <div className="general-app-container">
+                    <div className="general-app-content">
+                        <div className="general-app-text">
+                            <h2 className="general-app-title">Don't See The Right Role?</h2>
+                            <p className="general-app-desc">
+                                We're always looking for talented people. Send us your resume
+                                and we will reach out when a matching opportunity opens.
+                            </p>
+                        </div>
+
+                        <div className="general-app-form">
+                            <div className="form-row">
+                                <div className="form-group">
+                                    <label>Name</label>
+                                    <input type="text" className="form-input" />
+                                </div>
+                                <div className="form-group">
+                                    <label>Email ID.</label>
+                                    <input type="email" className="form-input" />
+                                </div>
+                            </div>
+
+                            <div className="form-group">
+                                <label>Upload Resume</label>
+                                <div className="file-upload-box">
+                                    <CloudUpload size={24} className="upload-icon" />
+                                    <p className="upload-text">
+                                        <span className="upload-link">Click to upload</span> or drag and drop
+                                    </p>
+                                    <small className="upload-hint">SVG, PNG, JPG or GIF (max. 800x400px)</small>
+                                </div>
+                            </div>
+
+                            <button className="view-job-btn-white">Send Application</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+};
+
+export default Careers;

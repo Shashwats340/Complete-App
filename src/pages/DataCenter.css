@@ -1,0 +1,658 @@
+/* Hero Section */
+.datacenter-hero-section {
+    position: relative;
+    /* Use same height/padding logic as Hero.css */
+    min-height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../assets/bg.img.png') no-repeat center center;
+    background-size: cover;
+    color: #FFFFFF;
+    margin-top: 0;
+    padding: 0 5%;
+    overflow: hidden;
+}
+
+.datacenter-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    /* Match Hero.css overlay */
+    z-index: 1;
+}
+
+.datacenter-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/* Typography matching Hero.css classes directly */
+.datacenter-hero-content .hero-eyebrow {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+.datacenter-hero-content .hero-headline {
+    font-size: 2.25rem;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.datacenter-hero-content .hero-subheadline {
+    font-size: 1.1rem;
+    color: #E2E8F0;
+    line-height: 1.6;
+    max-width: 800px;
+    font-weight: 400;
+    margin: 0 auto 1.5rem;
+}
+
+.datacenter-hero-content .hero-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #FFFFFF;
+    color: #111827;
+    /* Dark almost black text */
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    /* Pill shape */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.datacenter-hero-content .hero-cta-button:hover {
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.datacenter-hero-content .cta-icon {
+    transition: transform 0.2s ease;
+    stroke-width: 2.5px;
+}
+
+.datacenter-hero-content .hero-cta-button:hover .cta-icon {
+    transform: translate(3px, -3px);
+}
+
+
+/* Solutions Section (Unchanged) */
+.datacenter-solutions-section {
+    padding: 6rem 5%;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.datacenter-solutions-header {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.datacenter-solutions-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.datacenter-solutions-subtitle {
+    font-size: 1.05rem;
+    color: #4B5563;
+    line-height: 1.6;
+}
+
+.datacenter-solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.datacenter-solution-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: left;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.datacenter-solution-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-color: #dbeafe;
+    transform: translateY(-5px);
+}
+
+.solution-icon-box {
+    width: 56px;
+    height: 56px;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.solution-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.solution-card-description {
+    font-size: 0.95rem;
+    color: #6B7280;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .datacenter-solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-headline {
+        font-size: 2.5rem;
+        /* Match Home page mobile size */
+    }
+
+    .hero-subheadline {
+        font-size: 1rem;
+    }
+
+    /* Reuse Home page mobile styles logic */
+    .datacenter-hero-content {
+        gap: 1.5rem;
+    }
+
+    .datacenter-solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .datacenter-solutions-title {
+        font-size: 2rem;
+    }
+}
+
+/* Cloud Partner Ecosystem Section */
+.cloud-partner-section {
+    padding: 6rem 5%;
+    background-color: #FFFFFF;
+    border-top: 1px solid #F3F4F6;
+}
+
+.cloud-partner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.cloud-partner-left {
+    flex: 1;
+    max-width: 350px;
+    position: sticky;
+    top: 100px;
+}
+
+.cloud-partner-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #034EA2;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cloud-partner-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4B5563;
+}
+
+.cloud-partner-divider {
+    width: 1px;
+    background-color: #E5E7EB;
+    align-self: stretch;
+    min-height: 400px;
+}
+
+.cloud-partner-right {
+    flex: 2;
+}
+
+.cloud-platforms-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cloud-platform-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cloud-platform-item {
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.cloud-platform-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.platform-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFFFFF;
+}
+
+.platform-icon-wrapper.aws {
+    background-color: #232F3E;
+}
+
+.platform-icon-wrapper.azure {
+    background-color: #0078D4;
+}
+
+.platform-icon-wrapper.gcp {
+    background-color: #4285F4;
+}
+
+.platform-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.platform-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #034EA2;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.platform-desc {
+    font-size: 1rem;
+    color: #4B5563;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .cloud-partner-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .cloud-partner-divider {
+        display: none;
+    }
+
+    .cloud-partner-left {
+        max-width: 100%;
+        position: static;
+    }
+
+    .cloud-partner-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* High Performance & Physical Infrastructure Section */
+.hpc-infrastructure-section {
+    padding: 3rem 4%;
+    background: linear-gradient(135deg, #014C97 0%, #2D7BE8 50%, #3599FC 100%);
+    /* Blue gradient from Services */
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.hpc-header {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.hpc-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hpc-description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hpc-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    /* Dividers handle spacing */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hpc-card {
+    flex: 1;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hpc-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hpc-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hpc-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.hpc-card-divider {
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    align-self: stretch;
+    min-height: 150px;
+}
+
+/* Migration & Managed Operations Section */
+.migration-operations-section {
+    padding: 6rem 5%;
+    background-color: #FFFFFF;
+}
+
+.migration-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.migration-left {
+    flex: 1;
+    max-width: 400px;
+    position: sticky;
+    top: 100px;
+}
+
+.migration-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #034EA2;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.migration-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4B5563;
+}
+
+.migration-divider {
+    width: 1px;
+    background-color: #E5E7EB;
+    align-self: stretch;
+    min-height: 300px;
+}
+
+.migration-right {
+    flex: 1.5;
+}
+
+.migration-capabilities-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.migration-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.migration-item {
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 2rem;
+}
+
+.migration-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.migration-item-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #034EA2;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.migration-item-desc {
+    font-size: 1rem;
+    color: #4B5563;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hpc-grid {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .hpc-card-divider {
+        display: none;
+    }
+
+    .migration-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .migration-divider {
+        display: none;
+    }
+
+    .migration-left {
+        max-width: 100%;
+        position: static;
+    }
+}
+
+/* Why Choose Us Section */
+.datacenter-why-section {
+    padding: 2rem 5% 6rem;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.datacenter-why-header {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.datacenter-why-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.datacenter-why-subtitle {
+    font-size: 1.05rem;
+    color: #4B5563;
+    line-height: 1.6;
+}
+
+.datacenter-why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.datacenter-why-card {
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem;
+    text-align: left;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.datacenter-why-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific Card Gradients - Light to Dark */
+.datacenter-why-card.card-1 {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    /* Bright Blue */
+}
+
+.datacenter-why-card.card-2 {
+    background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+    /* Medium Blue */
+}
+
+.datacenter-why-card.card-3 {
+    background: linear-gradient(135deg, #004494 0%, #003366 100%);
+    /* Dark Blue */
+}
+
+.datacenter-why-card.card-4 {
+    background: linear-gradient(135deg, #003366 0%, #002244 100%);
+    /* Deep Navy */
+}
+
+.why-icon-wrapper {
+    background-color: #FFFFFF;
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.why-icon {
+    /* Color handled by parent card or specific override, but sticking to logic */
+    color: #034EA2;
+    /* Consistent brand blue for icons inside white box */
+}
+
+.why-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.why-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .datacenter-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .datacenter-why-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,244 @@
+/* --- Page Layout --- */
+.dt-page {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* --- Hero Section --- */
+.dt-hero-section {
+    position: relative;
+    min-height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../assets/bg.img.png') no-repeat center center;
+    background-size: cover;
+    color: #FFFFFF;
+    margin-top: 0;
+    padding: 0 5%;
+    overflow: hidden;
+}
+
+.dt-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dt-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    /* Offset for navbar */
+}
+
+.dt-hero-content .hero-eyebrow {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dt-hero-content .hero-headline {
+    font-size: 2.25rem;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dt-hero-content .hero-subheadline {
+    font-size: 1.1rem;
+    color: #E2E8F0;
+    line-height: 1.6;
+    max-width: 800px;
+    font-weight: 400;
+    margin: 0 auto 0;
+}
+
+.dt-hero-content .hero-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #FFFFFF;
+    color: #111827;
+    /* Dark almost black text */
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    /* Pill shape */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.dt-hero-content .hero-cta-button:hover {
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.dt-hero-content .cta-icon {
+    transition: transform 0.2s ease;
+    stroke-width: 2.5px;
+}
+
+.dt-hero-content .hero-cta-button:hover .cta-icon {
+    transform: translate(3px, -3px);
+}
+
+/* --- Framework Section --- */
+.dt-framework-section {
+    padding: 60px 5% 0px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.dt-framework-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1664c0;
+    /* Connexials Blue from the design */
+    text-align: center;
+    margin-bottom: 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dt-framework-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.dt-framework-grid {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.dt-framework-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.dt-icon-container {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dt-icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #1664c0;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dt-framework-item:hover .dt-icon-circle {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(22, 100, 192, 0.2);
+}
+
+.dt-icon {
+    color: #1664c0;
+}
+
+.dt-connector-line {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 40px);
+    width: calc(100% - 80px);
+    /* Fill space between current circle and next */
+    height: 2px;
+    border-top: 2px dashed #1664c0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Push arrow to the end */
+}
+
+.dt-connector-arrow {
+    color: #1664c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(50%);
+    /* Center arrow on the dashed line end */
+    background: #ffffff;
+    /* Cover the line behind the arrow */
+}
+
+
+.dt-item-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1664c0;
+    margin-bottom: 15px;
+}
+
+.dt-item-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+@media (max-width: 992px) {
+    .dt-framework-grid {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .dt-connector-line {
+        display: none;
+        /* Hide horizontal connectors on mobile */
+    }
+}
+
+@media (max-width: 1024px) {
+    .dt-hero-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .dt-hero-text {
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+}

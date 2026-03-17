@@ -1,0 +1,602 @@
+.careers-hero {
+    padding: 0 5%;
+    background: url('../assets/bg.img.png') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+}
+
+.careers-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    /* Slight tint */
+    z-index: 1;
+}
+
+.careers-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.careers-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.25rem;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+}
+
+.careers-title-small {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #E2E8F0;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+.careers-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #E2E8F0;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    max-width: 700px;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.careers-hero-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.careers-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.careers-btn-primary:hover {
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+}
+
+.careers-btn-primary:hover .btn-icon {
+    transform: translate(2px, -2px);
+}
+
+/* Jobs Section */
+.jobs-section {
+    padding: 5rem 5% 2rem 5%;
+    background-color: #FFFFFF;
+    scroll-margin-top: 100px;
+}
+
+.jobs-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.job-card {
+    background: #F9FAFB;
+    /* Light gray background like in image */
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.job-card:hover {
+    background: #FFFFFF;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    border-color: #E5E7EB;
+}
+
+.job-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.job-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0;
+}
+
+.job-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #6B7280;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.meta-separator {
+    color: #D1D5DB;
+}
+
+.view-job-btn {
+    background: transparent;
+    border: 1px solid #E5E7EB;
+    color: #6B7280;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.job-card:hover .view-job-btn {
+    background: #EFF6FF;
+    color: #2563EB;
+    border-color: #BFDBFE;
+}
+
+.view-job-btn:hover {
+    background: #2563EB !important;
+    color: #FFFFFF !important;
+    border-color: #2563EB !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+@media (max-width: 768px) {
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .view-job-btn {
+        width: 100%;
+    }
+
+    .job-meta {
+        flex-wrap: wrap;
+    }
+}
+
+/* Careers Benefits Section */
+.careers-benefits-section {
+    padding: 5rem 5%;
+    background-color: #FFFFFF;
+}
+
+.benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.benefits-left {
+    flex: 0 0 40%;
+    position: sticky;
+    top: 100px;
+}
+
+.tech-benefits-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1570EF;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.tech-benefits-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    color: #4B5563;
+    line-height: 1.6;
+}
+
+.benefits-divider {
+    width: 2px;
+    background-color: #E5E7EB;
+    align-self: stretch;
+}
+
+.benefits-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.benefit-item:first-child {
+    padding-top: 0;
+}
+
+.benefit-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.benefit-item-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1570EF;
+    margin-bottom: 0.75rem;
+}
+
+.benefit-item-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #4B5563;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .benefits-container {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .benefits-divider {
+        display: none;
+    }
+
+    .benefits-left {
+        flex: 1;
+        position: static;
+        margin-bottom: 1rem;
+    }
+
+    .benefit-item {
+        padding: 1.5rem 0;
+    }
+}
+
+/* Team & Culture Section */
+.team-culture-section {
+    padding: 1.5rem 5% 5rem 5%;
+    background-color: #FFFFFF;
+}
+
+.team-culture-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 3rem;
+}
+
+.carousel-wrapper {
+    position: relative;
+    max-width: 100%;
+}
+
+.team-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.team-carousel::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.team-img {
+    flex: 0 0 300px;
+    /* Fixed width for images */
+    height: 250px;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.team-img:hover {
+    transform: scale(1.02);
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FFFFFF;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #111827;
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.carousel-arrow.left {
+    left: -1.5rem;
+}
+
+.carousel-arrow.right {
+    right: -1.5rem;
+}
+
+.carousel-arrow:hover {
+    background: #F3F4F6;
+    transform: translateY(-50%) scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .carousel-arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .carousel-arrow.left {
+        left: -0.5rem;
+    }
+
+    .carousel-arrow.right {
+        right: -0.5rem;
+    }
+}
+
+/* General Application Section */
+.general-app-section {
+    background-color: #1570EF;
+    /* Matches design vivid blue */
+    padding: 3rem 4%;
+    color: #FFFFFF;
+}
+
+.general-app-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.general-app-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.general-app-text {
+    text-align: left;
+}
+
+.general-app-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.general-app-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    color: #E0EAFF;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.general-app-form {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.form-input {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF;
+    color: #111827;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-input:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.file-upload-box {
+    background: #FFFFFF;
+    border: 1px dashed #D1D5DB;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.file-upload-box:hover {
+    border-color: #1570EF;
+    background: #F9FAFB;
+}
+
+.upload-icon {
+    color: #667085;
+    margin-bottom: 0.5rem;
+}
+
+.upload-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #4B5563;
+    margin: 0;
+}
+
+.upload-link {
+    color: #1570EF;
+    font-weight: 600;
+}
+
+.upload-hint {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    color: #98A2B3;
+}
+
+.view-job-btn-white {
+    background: #FFFFFF;
+    color: #1570EF;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.view-job-btn-white:hover {
+    background: #F9FAFB;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+    .why-join-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .general-app-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .carousel-arrow {
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.9);
+    }
+}
+
+@media (max-width: 768px) {
+    .why-join-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-join-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
