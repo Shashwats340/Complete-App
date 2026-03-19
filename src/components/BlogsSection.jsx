@@ -12,9 +12,10 @@ const BlogsSection = () => {
     useEffect(() => {
         const getBlogs = async () => {
             try {
-                const data = await fetchFromStrapi('blogs');
-                if (data) {
-                    setBlogs(data);
+                const data = await fetchFromStrapi('blogs', { sort: 'createdAt:desc' });
+                if (data && Array.isArray(data)) {
+                    // Show latest 6 blogs on home page
+                    setBlogs(data.slice(0, 6));
                 }
             } catch (error) {
                 console.error("Error fetching blogs for home page:", error);

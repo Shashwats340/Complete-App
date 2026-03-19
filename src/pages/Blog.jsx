@@ -38,8 +38,7 @@ const Blog = () => {
         );
     });
 
-    const featuredBlogs = filteredBlogs.filter(post => post.featured);
-    const recentPosts = filteredBlogs.filter(post => !post.featured);
+    const displayBlogs = filteredBlogs;
 
     return (
         <div className="blog-page">
@@ -68,53 +67,17 @@ const Blog = () => {
                 </div>
             </Hero>
 
-            {/* Featured Blogs Section */}
-            <section className="featured-blogs">
-                <div className="container">
-                    <h2 className="section-title">Featured Blogs</h2>
-                    {loading ? (
-                        <div className="loading">Loading featured insights...</div>
-                    ) : (
-                        <div className="blog-grid">
-                            {featuredBlogs.length > 0 ? (
-                                featuredBlogs.map((post) => (
-                                    <Link to={`/blog/${post.documentId}`} className="blog-card-v2" key={post.id}>
-                                        <div className="blog-card-image">
-                                            <img
-                                                src={getStrapiMedia(post.image) || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop'}
-                                                alt={post.title}
-                                            />
-                                        </div>
-                                        <div className="blog-card-body">
-                                            <div className="blog-card-meta">
-                                                <span>{post.category}</span>
-                                                <span>{post.date || new Date().toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric' })}</span>
-                                            </div>
-                                            <h3 className="blog-card-title-v2">{post.title}</h3>
-                                            <p className="blog-card-desc">{post.description}</p>
-                                        </div>
-                                    </Link>
-                                ))
-                            ) : (
-                                <div className="no-results">
-                                    {searchQuery ? `No featured blogs matching "${searchQuery}"` : "No featured blogs found."}
-                                </div>
-                            )}
-                        </div>
-                    )}
-                </div>
-            </section>
 
             {/* Recent Blog Posts Section */}
             <section className="recent-blogs">
                 <div className="container">
-                    <h2 className="recent-blogs-title">Recent Blog Posts</h2>
+                    <h2 className="recent-blogs-title">Blog Posts</h2>
                     {loading ? (
                         <div className="loading">Loading recent posts...</div>
                     ) : (
                         <div className="blog-grid-recent">
-                            {recentPosts.length > 0 ? (
-                                recentPosts.map((post) => (
+                            {displayBlogs.length > 0 ? (
+                                displayBlogs.map((post) => (
                                     <Link to={`/blog/${post.documentId}`} className="blog-card-recent" key={post.id}>
                                         <div className="blog-card-image">
                                             <img
@@ -141,7 +104,7 @@ const Blog = () => {
                     )}
 
                     {/* Pagination - Only shown if blogs exceed 6 */}
-                    {recentPosts.length > 6 && (
+                    {displayBlogs.length > 6 && (
                         <div className="blog-pagination">
                             <button className="pagination-arrow prev">
                                 <ArrowLeft size={20} />
