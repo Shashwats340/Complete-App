@@ -1,0 +1,128 @@
+.terms-page-container {
+    padding-top: 120px;
+    /* Extra padding for navbar */
+    padding-bottom: 80px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.terms-content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border-radius: 12px;
+}
+
+.terms-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.terms-meta {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.terms-meta p {
+    margin-bottom: 0.5rem;
+}
+
+.terms-meta a {
+    color: #034EA2;
+    text-decoration: none;
+}
+
+.terms-meta a:hover {
+    text-decoration: underline;
+}
+
+.terms-intro {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    color: #334155;
+    line-height: 1.7;
+}
+
+.terms-intro p {
+    margin-bottom: 1.5rem;
+}
+
+.terms-section {
+    margin-bottom: 2.5rem;
+}
+
+.terms-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.terms-section p {
+    font-size: 1rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.terms-section ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.terms-section li {
+    font-size: 1rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.contact-address {
+    font-style: normal;
+    color: #334155;
+    line-height: 1.8;
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #034EA2;
+}
+
+.contact-address a {
+    color: #034EA2;
+    text-decoration: none;
+}
+
+.contact-address a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .terms-page-container {
+        padding-top: 100px;
+    }
+
+    .terms-content-wrapper {
+        padding: 2rem 1.5rem;
+        border-radius: 0;
+    }
+
+    .terms-title {
+        font-size: 2rem;
+    }
+
+    .terms-section h2 {
+        font-size: 1.25rem;
+    }
+}
