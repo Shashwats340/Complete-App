@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import './CookiesPopup.css';
 
 const CookiesPopup = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return !localStorage.getItem('cookieConsent');
+    }
+    return false;
+  });
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookieConsent');
-    if (!consent) {
-      setIsVisible(true);
-    }
+    // No longer needed to set visibility here as it's handled in the initializer
   }, []);
 
   const handleAccept = () => {

@@ -1,4 +1,3 @@
-/* StaffAugmentation.css */
 .staff-augmentation-page {
     font-family: 'Poppins', sans-serif;
 }
@@ -41,8 +40,7 @@
     align-items: center;
     gap: 1rem;
     padding-top: 2rem;
-    /* Offset for navbar */
-}
+    }
 
 .staff-hero-content .hero-eyebrow {
     font-size: 1.5rem;
@@ -78,12 +76,10 @@
     gap: 0.75rem;
     background-color: #FFFFFF;
     color: #111827;
-    /* Dark almost black text */
     padding: 0.85rem 2rem;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 9999px;
-    /* Pill shape */
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -107,23 +103,20 @@
 
 @media (max-width: 768px) {
     .staff-hero-content .hero-headline {
-        font-size: 2.5rem;
+    font-size: 2.5rem;
     }
 
     .staff-hero-content .hero-eyebrow {
-        font-size: 1.25rem;
+    font-size: 1.25rem;
     }
 }
 
-/* Experts Section */
 .staff-experts-section {
     padding: 2rem 5%;
     background-color: #F8FAFC;
-    /* Light gray background to distinguish */
     text-align: center;
     overflow: hidden;
-    /* Prevent page scroll */
-}
+    }
 
 .staff-experts-header {
     display: flex;
@@ -143,8 +136,7 @@
 .staff-header-content .staff-section-title {
     margin-bottom: 0.5rem;
     color: #2563EB;
-    /* Match 'How it works?' color */
-}
+    }
 
 .staff-header-content .staff-section-subtitle {
     margin: 0;
@@ -156,8 +148,7 @@
     display: flex;
     gap: 1rem;
     padding-bottom: 0.5rem;
-    /* Align visually with text */
-}
+    }
 
 .staff-scroll-btn {
     width: 3rem;
@@ -188,13 +179,13 @@
 
 @media (max-width: 768px) {
     .staff-experts-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
     }
 
     .staff-header-controls {
-        align-self: flex-end;
+    align-self: flex-end;
     }
 }
 
@@ -219,37 +210,31 @@
 
 @keyframes marquee {
     0% {
-        transform: translateX(0);
+    transform: translateX(0);
     }
 
     100% {
-        transform: translateX(calc(-50% - 1rem));
+    transform: translateX(calc(-50% - 1rem));
     }
 }
 
 .staff-expert-card {
     background: linear-gradient(135deg, #014C97 0%, #2D7BE8 50%, #3599FC 100%);
-    /* Same as Home page cards */
     border-radius: 1rem;
-    padding: 2.5rem 2rem;
-    /* Match Services.css padding */
+    padding: 2rem 1.5rem;
     text-align: left;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 380px;
-    /* Fixed height for absolute uniformity */
-    width: 320px;
-    /* Fixed width matching Frontend Engineering */
-    /* Approximate width of home page cards */
+    height: 320px;
+    width: 280px;
     flex-shrink: 0;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    /* Match Services.css shadow */
-}
+    }
 
 .staff-expert-card:hover {
     transform: translateY(-5px);
@@ -257,46 +242,42 @@
 }
 
 .staff-expert-icon {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     border: none;
     filter: none;
-    /* Remove glowing effect */
-}
+    }
 
 .staff-expert-icon svg {
-    width: 24px;
-    /* Reduced to match Services.css icon size */
-    height: 24px;
+    width: 20px;
+    height: 20px;
     stroke-width: 1.5;
 }
 
 .staff-expert-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;
-    /* Match Services.css font size */
+    font-size: 1.15rem;
     font-weight: 600;
     color: #FFFFFF;
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.3;
     flex-grow: 1;
 }
 
 .staff-expert-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 0.35rem;
     margin-top: auto;
-    /* Force 2 lines tall approx to keep cards even */
-    min-height: 4.2rem;
+    min-height: 3.8rem;
     align-content: flex-start;
 }
 
@@ -319,35 +300,30 @@
 
 @media (max-width: 1200px) {
     .staff-expert-card {
-        min-width: calc(33.333% - 1.33rem);
-        /* 3 cards */
+    min-width: calc(33.333% - 1.33rem);
     }
 }
 
 @media (max-width: 900px) {
     .staff-expert-card {
-        min-width: calc(50% - 1rem);
-        /* 2 cards */
+    min-width: calc(50% - 1rem);
     }
 }
 
 @media (max-width: 768px) {
     .staff-expert-card {
-        padding: 1.5rem;
+    padding: 1.5rem;
     }
 }
 
 @media (max-width: 600px) {
     .staff-expert-card {
-        min-width: 85%;
-        /* 1 card partially visible */
+    min-width: 85%;
     }
 }
 
-/* Why Choose Connexials Section */
 .staff-why-section {
     padding: 2rem 5% 6rem;
-    /* Reduced top padding */
     background-color: #FFFFFF;
     text-align: center;
 }
@@ -378,9 +354,7 @@
 
 .staff-why-grid-container {
     background: #FAFAFA;
-    /* Very light gray background */
     border: 1px solid #DDF2FF;
-    /* Soft light blue border */
     border-radius: 1rem;
     padding: 1.5rem 1.5rem;
     color: #000000;
@@ -402,7 +376,6 @@
     padding: 1.5rem 1rem;
 }
 
-/* Add inner grid borders */
 .staff-why-item:nth-child(1),
 .staff-why-item:nth-child(2) {
     border-right: 1px solid #DDF2FF;
@@ -423,8 +396,7 @@
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #0056B3;
-    /* Darker blue color for numbers */
-}
+    }
 
 .staff-why-item p {
     font-size: 0.95rem;
@@ -435,37 +407,35 @@
 
 @media (max-width: 1024px) {
     .staff-why-grid {
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Reset and reapply borders for 2 columns */
     .staff-why-item {
-        border: none !important;
+    border: none !important;
     }
 
     .staff-why-item:nth-child(odd) {
-        border-right: 1px solid #DDF2FF !important;
+    border-right: 1px solid #DDF2FF !important;
     }
 
     .staff-why-item:nth-child(1),
     .staff-why-item:nth-child(2),
     .staff-why-item:nth-child(3),
     .staff-why-item:nth-child(4) {
-        border-bottom: 1px solid #DDF2FF !important;
+    border-bottom: 1px solid #DDF2FF !important;
     }
 }
 
 @media (max-width: 600px) {
     .staff-why-grid {
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     }
 
-    /* Reset and reapply borders for 1 column */
     .staff-why-item {
-        border: none !important;
+    border: none !important;
     }
 
     .staff-why-item:not(:last-child) {
-        border-bottom: 1px solid #DDF2FF !important;
+    border-bottom: 1px solid #DDF2FF !important;
     }
 }

@@ -15,8 +15,7 @@ const ApplicationDevelopment = () => {
                 subtitle="From custom application development to automated quality assurance, we help enterprises build secure, high-performance software that drives innovation and stands the test of scale."
             />
 
-            {/* Business Problems We Solve Section */}
-            <section className="app-problems-section">
+                        <section className="app-problems-section">
                 <div className="app-problems-header">
                     <h2 className="app-problems-title">Business Problems We Solve</h2>
                     <p className="app-problems-subtitle">
@@ -26,8 +25,7 @@ const ApplicationDevelopment = () => {
                 </div>
 
                 <div className="app-problems-grid">
-                    {/* Card 1 */}
-                    <div className="app-problem-card">
+                                        <div className="app-problem-card">
                         <div className="app-problem-icon-wrapper">
                             <Settings size={28} className="app-problem-icon" />
                         </div>
@@ -37,8 +35,7 @@ const ApplicationDevelopment = () => {
                         </p>
                     </div>
 
-                    {/* Card 2 */}
-                    <div className="app-problem-card">
+                                        <div className="app-problem-card">
                         <div className="app-problem-icon-wrapper">
                             <Settings size={28} className="app-problem-icon" />
                         </div>
@@ -48,8 +45,7 @@ const ApplicationDevelopment = () => {
                         </p>
                     </div>
 
-                    {/* Card 3 */}
-                    <div className="app-problem-card">
+                                        <div className="app-problem-card">
                         <div className="app-problem-icon-wrapper">
                             <Settings size={28} className="app-problem-icon" />
                         </div>
@@ -59,8 +55,7 @@ const ApplicationDevelopment = () => {
                         </p>
                     </div>
 
-                    {/* Card 4 */}
-                    <div className="app-problem-card">
+                                        <div className="app-problem-card">
                         <div className="app-problem-icon-wrapper">
                             <Settings size={28} className="app-problem-icon" />
                         </div>
@@ -72,8 +67,7 @@ const ApplicationDevelopment = () => {
                 </div>
             </section>
 
-            {/* Our Capabilities Sticky Scroll Section */}
-            <StickyScrollLayout
+                        <StickyScrollLayout
                 title="Our Capabilities"
                 subtitle="We provide full-lifecycle application services, from initial design and development to rigorous testing and ongoing management."
             >
@@ -99,8 +93,7 @@ const ApplicationDevelopment = () => {
                 </div>
             </StickyScrollLayout>
 
-            {/* Custom Software Development Section */}
-            <section className="app-custom-dev-section">
+                        <section className="app-custom-dev-section">
                 <div className="app-custom-header">
                     <h2 className="app-custom-title">Custom Software Development</h2>
                     <p className="app-custom-subtitle">
@@ -148,8 +141,7 @@ const ApplicationDevelopment = () => {
                         </p>
                     </div>
                 </div>
-            </section>                {/* Quality Assurance & Control Section */}
-            <section className="app-qa-section">
+            </section>                            <section className="app-qa-section">
                 <div className="app-qa-header">
                     <h2 className="app-qa-title">Quality Assurance & Control</h2>
                     <p className="app-qa-subtitle">
@@ -161,8 +153,7 @@ const ApplicationDevelopment = () => {
                 </div>
 
                 <div className="app-qa-grid">
-                    {/* Card 1 */}
-                    <div className="app-qa-card">
+                                        <div className="app-qa-card">
                         <div className="app-qa-image-wrapper">
                             <img src={transformImg} alt="Test Automation" className="app-qa-image" />
                         </div>
@@ -174,8 +165,7 @@ const ApplicationDevelopment = () => {
                         </div>
                     </div>
 
-                    {/* Card 2 */}
-                    <div className="app-qa-card">
+                                        <div className="app-qa-card">
                         <div className="app-qa-image-wrapper">
                             <img src={transformImg} alt="Performance Testing" className="app-qa-image" />
                         </div>
@@ -187,8 +177,7 @@ const ApplicationDevelopment = () => {
                         </div>
                     </div>
 
-                    {/* Card 3 */}
-                    <div className="app-qa-card">
+                                        <div className="app-qa-card">
                         <div className="app-qa-image-wrapper">
                             <img src={transformImg} alt="Security Testing (DAST/SAST)" className="app-qa-image" />
                         </div>
@@ -200,8 +189,7 @@ const ApplicationDevelopment = () => {
                         </div>
                     </div>
 
-                    {/* Card 4 */}
-                    <div className="app-qa-card">
+                                        <div className="app-qa-card">
                         <div className="app-qa-image-wrapper">
                             <img src={transformImg} alt="Mobile & Compatibility" className="app-qa-image" />
                         </div>
@@ -215,8 +203,7 @@ const ApplicationDevelopment = () => {
                 </div>
             </section>
 
-            {/* Application Modernization Section */}
-            <section className="app-mod-section">
+                        <section className="app-mod-section">
                 <div className="app-mod-header">
                     <h2 className="app-mod-title">Application Modernization</h2>
                     <p className="app-mod-subtitle">
@@ -266,8 +253,7 @@ const ApplicationDevelopment = () => {
                 </div>
             </section>
 
-            {/* DevOps & CI/CD Sticky Scroll Section */}
-            <StickyScrollLayout
+                        <StickyScrollLayout
                 title="DevOps & CI/CD"
                 subtitle="Accelerate delivery with a culture of automation. We help you implement DevOps practices that bridge the gap between development and operations, ensuring faster, more reliable releases."
             >

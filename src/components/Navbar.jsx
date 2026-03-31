@@ -42,18 +42,15 @@ const Navbar = () => {
                 <img src={logo} alt="Connexials" className="logo-image" />
             </div>
 
-            {/* Mobile Hamburger Button */}
-            <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+                        <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
                 {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
 
-            {/* Links and Actions Container */}
-            <div className={`nav-menu-wrapper ${isMobileMenuOpen ? 'mobile-active' : ''}`}>
+                        <div className={`nav-menu-wrapper ${isMobileMenuOpen ? 'mobile-active' : ''}`}>
                 <ul className="nav-links">
                     <li className="nav-item"><Link to="/" onClick={handleLinkClick} className="nav-link">Home</Link></li>
 
-                    {/* Services Mega Menu */}
-                    <li className={`nav-item has-dropdown ${forceClose ? 'force-close' : ''} ${isServicesOpen ? 'mobile-dropdown-open' : ''}`}>
+                                        <li className={`nav-item has-dropdown ${forceClose ? 'force-close' : ''} ${isServicesOpen ? 'mobile-dropdown-open' : ''}`}>
                         <span
                             className="nav-link dropdown-trigger"
                             onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -63,17 +60,16 @@ const Navbar = () => {
                         <div className="mega-menu">
                             <div className="mega-menu-grid">
                                 <Link to="/enterprise-applications" onClick={handleLinkClick} className="mega-menu-link">Enterprise Applications</Link>
-                                <Link to="/staff-augmentation" onClick={handleLinkClick} className="mega-menu-link">Staff Augmentation</Link>
-                                <Link to="/technology-services" onClick={handleLinkClick} className="mega-menu-link">Technology Services</Link>
                                 <Link to="/ai-data-analytics" onClick={handleLinkClick} className="mega-menu-link">AI & Data Intelligence</Link>
-                                <Link to="/data-center" onClick={handleLinkClick} className="mega-menu-link">Data Center Solutions</Link>
                                 <Link to="/digital-transformation" onClick={handleLinkClick} className="mega-menu-link">Digital Transformation</Link>
+                                <Link to="/data-center" onClick={handleLinkClick} className="mega-menu-link">Data Center Solutions</Link>
+                                <Link to="/technology-services" onClick={handleLinkClick} className="mega-menu-link">Technology Services</Link>
+                                <Link to="/staff-augmentation" onClick={handleLinkClick} className="mega-menu-link">Staff Augmentation</Link>
                             </div>
                         </div>
                     </li>
 
-                    {/* Resources Simple Dropdown */}
-                    <li className={`nav-item has-dropdown ${forceClose ? 'force-close' : ''} ${isResourcesOpen ? 'mobile-dropdown-open' : ''}`}>
+                                        <li className={`nav-item has-dropdown ${forceClose ? 'force-close' : ''} ${isResourcesOpen ? 'mobile-dropdown-open' : ''}`}>
                         <span
                             className="nav-link dropdown-trigger"
                             onClick={() => setIsResourcesOpen(!isResourcesOpen)}
@@ -89,8 +85,7 @@ const Navbar = () => {
                     <li className="nav-item"><Link to="/contact" onClick={handleLinkClick} className="nav-link">Contact</Link></li>
                 </ul>
 
-                {/* Desktop/Mobile Actions */}
-                <div className="nav-actions">
+                                <div className="nav-actions">
                     <Link to="/contact" className="nav-cta" onClick={handleLinkClick}>Get Started</Link>
                 </div>
             </div>

@@ -1,0 +1,38 @@
+
+FILE: C:\Users\HP\Desktop\custom-cms\connexials\src\components\CookiesPopup.jsx
+
+C:\Users\HP\Desktop\custom-cms\connexials\src\components\CookiesPopup.jsx
+  10:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+   8 |     const consent = localStorage.getItem('cookieConsent');
+   9 |     if (!consent) {
+> 10 |       setIsVisible(true);
+     |       ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  11 |     }
+  12 |   }, []);
+  13 |  react-hooks/set-state-in-effect
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+FILE: C:\Users\HP\Desktop\custom-cms\connexials\src\components\IndustriesSection.jsx
+
+C:\Users\HP\Desktop\custom-cms\connexials\src\components\IndustriesSection.jsx
+  52:11  error  'scroll' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+FILE: C:\Users\HP\Desktop\custom-cms\connexials\src\pages\Contact.jsx
+
+C:\Users\HP\Desktop\custom-cms\connexials\src\pages\Contact.jsx
+  3:8  error  'transformImg' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+

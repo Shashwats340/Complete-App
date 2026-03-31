@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './BlogsSection.css';
 import { ArrowLeft, ArrowRight, Loader2 } from 'lucide-react';
-import { fetchFromStrapi, getStrapiMedia } from '../services/api';
+import { fetchBlogs, formatCmsDate, getCmsMedia } from '../services/api';
 
 const BlogsSection = () => {
     const scrollContainerRef = useRef(null);
@@ -12,7 +12,7 @@ const BlogsSection = () => {
     useEffect(() => {
         const getBlogs = async () => {
             try {
-                const data = await fetchFromStrapi('blogs', { sort: 'createdAt:desc' });
+                const data = await fetchBlogs();
                 if (data && Array.isArray(data)) {
                     // Show latest 6 blogs on home page
                     setBlogs(data.slice(0, 6));
@@ -68,22 +68,22 @@ const BlogsSection = () => {
                 <div className="blogs-scroll-container" ref={scrollContainerRef}>
                     {blogs.length > 0 ? (
                         blogs.map((blog) => (
-                            <Link to={`/blog/${blog.documentId}`} className="blog-card" key={blog.id}>
+                            <Link to={`/blog/${blog.slug}`} className="blog-card" key={blog.id}>
                                 <div className="blog-image-wrapper">
                                     <img
-                                        src={getStrapiMedia(blog.image) || 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop'}
+                                        src={getCmsMedia(blog.featuredImage) || 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop'}
                                         alt={blog.title}
                                         className="blog-image"
                                     />
                                 </div>
                                 <div className="blog-content">
                                     <div className="blog-meta">
-                                        <span className="blog-category">{blog.category}</span>
+                                        <span className="blog-category">{blog.status}</span>
                                         <span className="blog-meta-divider">|</span>
-                                        <span className="blog-date">{blog.date || new Date().toLocaleDateString()}</span>
+                                        <span className="blog-date">{formatCmsDate(blog.createdAt)}</span>
                                     </div>
                                     <h3 className="blog-card-title">{blog.title}</h3>
-                                    <p className="blog-description">{blog.description}</p>
+                                    <p className="blog-description">{blog.excerpt}</p>
                                 </div>
                             </Link>
                         ))

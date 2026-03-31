@@ -55,13 +55,12 @@ const StaffAugmentation = () => {
         <div className="staff-augmentation-page">
             <Hero
                 eyebrow="Staff Augmentation"
-                title={<>The Right Talent. The Right Time.<br />Zero Compromise.</>}
+                title={<>The Right Talent. The Right Time.<br />The Right Fit.</>}
                 subtitle="Hiring exceptional technologists is hard. We provide vetted engineers who integrate seamlessly into your teams — aligned to your standards and delivering impact from day one."
                 backgroundImage={staffBg}
                 className="premium-hero"
             />
 
-            {/* Experts Section */}
             <section className="staff-experts-section">
                 <div className="staff-experts-header">
                     <div className="staff-header-content">
@@ -97,7 +96,6 @@ const StaffAugmentation = () => {
 
             <TalentPromise />
 
-            {/* Why Choose Connexials Section */}
             <section className="staff-why-section">
                 <div className="staff-why-container">
                     <div className="staff-why-header">

@@ -156,7 +156,7 @@ const EnterpriseApplications = () => {
         <div className="enterprise-page">
             <Hero
                 eyebrow="Enterprise Applications"
-                title="Systems That Run Your Business—Built to Evolve With It."
+                title="Systems That Run Your Business—Designed to Evolve With It."
                 subtitle="Enterprise applications are the operational backbone of every large organization. When they work well, they're invisible. When they don't, everything slows down. Connexials designs, implements, customizes, and manages enterprise application ecosystems that drive efficiency, enable growth, and adapt gracefully as your business evolves."
                 backgroundImage={enterpriseBg}
                 className="premium-hero"
@@ -167,7 +167,7 @@ const EnterpriseApplications = () => {
             {/* Technologies We Work With Section */}
             <section className="ent-tech-section">
                 <div className="ent-tech-header">
-                    <h2 className="ent-tech-title">Technologies We Work With</h2>
+                    <h2 className="ent-tech-title">Tools & Technologies Across Segments</h2>
                     <p className="ent-tech-subtitle">
                         Are your data insights translating into customer engagement and ROI? We
                         design, audit, and scale experimentation programs that use statistical rigor,

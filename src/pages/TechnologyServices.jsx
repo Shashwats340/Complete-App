@@ -15,7 +15,6 @@ const TechnologyServices = () => {
                 className="premium-hero"
             />
 
-            {/* What We Deliver Section */}
             <section className="tech-deliver-section">
                 <div className="tech-deliver-header">
                     <h2 className="tech-deliver-title">What We Deliver</h2>
@@ -45,11 +44,10 @@ const TechnologyServices = () => {
                 </div>
             </section>
 
-            {/* Technologies We Work With Section */}
             <section className="tech-stack-section">
                 <div className="tech-stack-container">
                     <div className="tech-stack-left">
-                        <h2 className="tech-stack-title">Technologies We<br />Work With</h2>
+                        <h2 className="tech-stack-title">Tools &<br />Technologies</h2>
                     </div>
                     <div className="tech-stack-right">
                         <div className="tech-stack-list">
@@ -63,11 +61,15 @@ const TechnologyServices = () => {
                             </div>
                             <div className="tech-stack-item">
                                 <h3>Data & AI</h3>
-                                <p>Snowflake, Databricks, Apache Kafka,<br />TensorFlow, PyTorch</p>
+                                <p>Snowflake, Databricks, Apache Kafka,<br />TensorFlow, PyTorch, Power BI</p>
                             </div>
                             <div className="tech-stack-item">
                                 <h3>DevOps</h3>
                                 <p>Kubernetes, Docker, Terraform, GitHub Actions,<br />Jenkins, ArgoCD</p>
+                            </div>
+                            <div className="tech-stack-item">
+                                <h3>Testing & QA</h3>
+                                <p>Selenium, JUnit, TestNG, Cypress, Playwright,<br />JMeter, Postman</p>
                             </div>
                         </div>
                     </div>

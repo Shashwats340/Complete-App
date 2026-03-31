@@ -11,6 +11,7 @@ const Hero = ({
     ctaLink = "/contact",
     showCta = true,
     backgroundImage,
+    videoSrc,
     className = "",
     children
 }) => {
@@ -21,6 +22,17 @@ const Hero = ({
             className={`hero-section hero-overlay ${className}`}
             style={sectionStyle}
         >
+            {videoSrc && (
+                <video
+                    className="hero-video"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                >
+                    <source src={videoSrc} type="video/mp4" />
+                </video>
+            )}
             <div className="hero-content-wrapper">
                 <div className="hero-text">
                     {eyebrow && <span className="hero-eyebrow">{eyebrow}</span>}

@@ -18,6 +18,7 @@ const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation')
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogDetail = lazy(() => import('./pages/BlogDetail'));
+const JobDetail = lazy(() => import('./pages/JobDetail'));
 const TermsOfService = lazy(() => import('./pages/TermsOfService'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const CookieStatement = lazy(() => import('./pages/CookieStatement'));
@@ -56,7 +57,8 @@ function App() {
           <Route path="/digital-transformation" element={<DigitalTransformation />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/careers/:slug" element={<JobDetail />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/cookie-statement" element={<CookieStatement />} />

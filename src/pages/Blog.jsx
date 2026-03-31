@@ -5,7 +5,7 @@ import CTASection from '../components/CTASection';
 import { Search, ArrowUpRight, ArrowLeft, ArrowRight } from 'lucide-react';
 import blogsHeroImg from '../assets/blogs.png';
 import './Blog.css';
-import { fetchFromStrapi, getStrapiMedia } from '../services/api';
+import { fetchBlogs, formatCmsDate, getCmsMedia } from '../services/api';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
@@ -15,7 +15,7 @@ const Blog = () => {
     useEffect(() => {
         const loadBlogs = async () => {
             try {
-                const data = await fetchFromStrapi('blogs');
+                const data = await fetchBlogs();
                 if (data) {
                     setBlogs(data);
                 }
@@ -33,8 +33,8 @@ const Blog = () => {
         const query = searchQuery.toLowerCase();
         return (
             post.title?.toLowerCase().includes(query) ||
-            post.description?.toLowerCase().includes(query) ||
-            post.category?.toLowerCase().includes(query)
+            post.excerpt?.toLowerCase().includes(query) ||
+            post.status?.toLowerCase().includes(query)
         );
     });
 
@@ -78,20 +78,20 @@ const Blog = () => {
                         <div className="blog-grid-recent">
                             {displayBlogs.length > 0 ? (
                                 displayBlogs.map((post) => (
-                                    <Link to={`/blog/${post.documentId}`} className="blog-card-recent" key={post.id}>
+                                    <Link to={`/blog/${post.slug}`} className="blog-card-recent" key={post.id}>
                                         <div className="blog-card-image">
                                             <img
-                                                src={getStrapiMedia(post.image) || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'}
+                                                src={getCmsMedia(post.featuredImage) || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'}
                                                 alt={post.title}
                                             />
                                         </div>
                                         <div className="blog-card-body-recent">
                                             <div className="blog-card-meta-recent">
-                                                <span>{post.category}</span>
-                                                <span>{post.date || new Date().toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric' })}</span>
+                                                <span>{post.status}</span>
+                                                <span>{formatCmsDate(post.createdAt)}</span>
                                             </div>
                                             <h3 className="blog-card-title-recent">{post.title}</h3>
-                                            <p className="blog-card-desc-recent">{post.description}</p>
+                                            <p className="blog-card-desc-recent">{post.excerpt}</p>
                                         </div>
                                     </Link>
                                 ))

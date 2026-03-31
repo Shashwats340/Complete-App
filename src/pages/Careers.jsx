@@ -1,18 +1,77 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import { MapPin, Clock, Briefcase, ChevronRight, ChevronLeft, CloudUpload } from 'lucide-react';
 import './Careers.css';
-import { fetchFromStrapi } from '../services/api';
+import { fetchJobs, formatJobType } from '../services/api';
 
 const Careers = () => {
+    const testimonialsData = [
+        {
+            id: 1,
+            name: "Sarah Chen",
+            role: "Senior Software Engineer",
+            stars: 5,
+            comment: "The emphasis on clean architecture and ownership here is real. It's refreshing to work where your technical input is actually valued."
+        },
+        {
+            id: 2,
+            name: "Michael Ross",
+            role: "Full Stack Developer",
+            stars: 5,
+            comment: "I love the collaborative culture. Even as a junior, I felt supported from day one. There's always someone willing to mentor you."
+        },
+        {
+            id: 3,
+            name: "Emily Zhang",
+            role: "Technical Lead",
+            stars: 4,
+            comment: "Working on mission-critical platforms keeps things exciting. You know your code is making a difference at scale for enterprise clients."
+        },
+        {
+            id: 4,
+            name: "David Miller",
+            role: "DevOps Engineer",
+            stars: 5,
+            comment: "The growth opportunities are outstanding. I've had the chance to lead complex migrations and learn cutting-edge cloud technologies."
+        },
+        {
+            id: 5,
+            name: "Arjun Mehta",
+            role: "Senior Backend Engineer",
+            stars: 5,
+            comment: "The technical exposure here is unparalleled. Working on high-scale systems teaches you things that no tutorial ever can."
+        },
+        {
+            id: 6,
+            name: "Priyanka Patil",
+            role: "Frontend Developer",
+            stars: 5,
+            comment: "The collaborative atmosphere and focus on innovation make every workday exciting. I've truly found a place where I can grow."
+        }
+    ];
+
     const scrollRef = useRef(null);
+    const testimonialsScrollRef = useRef(null);
+    
+    const handleHorizontalScroll = (ref, direction) => {
+        if (ref.current) {
+            const { current } = ref;
+            const scrollAmount = 400;
+            if (direction === 'left') {
+                current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    };
     const [jobs, setJobs] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const loadJobs = async () => {
             try {
-                const data = await fetchFromStrapi('jobs');
+                const data = await fetchJobs();
                 if (data) {
                     setJobs(data);
                 }
@@ -26,17 +85,7 @@ const Careers = () => {
         loadJobs();
     }, []);
 
-    const scroll = (direction) => {
-        if (scrollRef.current) {
-            const { current } = scrollRef;
-            const scrollAmount = 400; // Adjust scroll distance as needed
-            if (direction === 'left') {
-                current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            } else {
-                current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            }
-        }
-    };
+
 
     const teamImages = [
         "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
@@ -119,12 +168,12 @@ const Careers = () => {
                                     <div className="job-meta">
                                         <span className="meta-item"><MapPin size={16} /> {job.location}</span>
                                         <span className="meta-separator">|</span>
-                                        <span className="meta-item"><Clock size={16} /> {job.type}</span>
+                                        <span className="meta-item"><Clock size={16} /> {formatJobType(job.type)}</span>
                                         <span className="meta-separator">|</span>
-                                        <span className="meta-item"><Briefcase size={16} /> {job.department}</span>
+                                        <span className="meta-item"><Briefcase size={16} /> {job.experience || 'Experience not listed'}</span>
                                     </div>
                                 </div>
-                                <button className="view-job-btn">View Job</button>
+                                <Link className="view-job-btn" to={`/careers/${job.slug}`}>View Job</Link>
                             </div>
                         ))
                     ) : (
@@ -133,8 +182,7 @@ const Careers = () => {
                 </div>
             </section>
 
-            {/* Teams & Culture Section */}
-            <section className="team-culture-section">
+                        <section className="team-culture-section">
                 <div className="team-culture-container">
                     <h2 className="section-title">Teams & Culture</h2>
                     <div className="carousel-wrapper">
@@ -143,18 +191,46 @@ const Careers = () => {
                                 <img key={index} src={img} alt={`Team ${index + 1}`} className="team-img" />
                             ))}
                         </div>
-                        <button className="carousel-arrow right" onClick={() => scroll('right')}>
+                        <button className="carousel-arrow right" onClick={() => handleHorizontalScroll(scrollRef, 'right')}>
                             <ChevronRight />
                         </button>
-                        <button className="carousel-arrow left" onClick={() => scroll('left')}>
+                        <button className="carousel-arrow left" onClick={() => handleHorizontalScroll(scrollRef, 'left')}>
+                            <ChevronLeft />
+                        </button>
+                    </div>
+                </div>
+            </section>
+                        <section className="employee-speak-section">
+                <div className="employee-speak-container">
+                    <h2 className="section-title">Employee Speak</h2>
+                    <div className="carousel-wrapper">
+                        <div className="testimonials-scroll" ref={testimonialsScrollRef}>
+                            {testimonialsData.map((testimonial) => (
+                                <div key={testimonial.id} className="testimonial-card">
+                                    <div className="testimonial-stars">
+                                        {[...Array(5)].map((_, i) => (
+                                            <span key={i} className={i < testimonial.stars ? "star filled" : "star"}>★</span>
+                                        ))}
+                                    </div>
+                                    <p className="testimonial-comment">"{testimonial.comment}"</p>
+                                    <div className="testimonial-footer">
+                                        <h4 className="testimonial-name">{testimonial.name}</h4>
+                                        <p className="testimonial-role">{testimonial.role}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <button className="carousel-arrow right" onClick={() => handleHorizontalScroll(testimonialsScrollRef, 'right')}>
+                            <ChevronRight />
+                        </button>
+                        <button className="carousel-arrow left" onClick={() => handleHorizontalScroll(testimonialsScrollRef, 'left')}>
                             <ChevronLeft />
                         </button>
                     </div>
                 </div>
             </section>
 
-            {/* General Application Section */}
-            <section className="general-app-section">
+                        <section className="general-app-section">
                 <div className="general-app-container">
                     <div className="general-app-content">
                         <div className="general-app-text">

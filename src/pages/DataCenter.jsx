@@ -64,8 +64,7 @@ const DataCenter = () => {
                 className="premium-hero"
             />
 
-            {/* Our Data Center Solutions Section */}
-            <section className="datacenter-solutions-section">
+                        <section className="datacenter-solutions-section">
                 <div className="datacenter-solutions-header">
                     <h2 className="datacenter-solutions-title">Our Data Center Solutions</h2>
                     <p className="datacenter-solutions-subtitle">
@@ -77,9 +76,9 @@ const DataCenter = () => {
 
                 <div className="datacenter-solutions-grid">
                     {solutionsData.map((item, index) => (
-                        <div key={index} className="datacenter-solution-card">
+                        <div key={index} className={`datacenter-solution-card card-${index + 1}`}>
                             <div className="solution-icon-box">
-                                <item.icon size={28} strokeWidth={1.5} color="#4F46E5" />
+                                <item.icon size={28} strokeWidth={1.5} color="#0056b3" />
                             </div>
                             <h3 className="solution-card-title">{item.title}</h3>
                             <p className="solution-card-description">{item.description}</p>
@@ -88,8 +87,7 @@ const DataCenter = () => {
                 </div>
             </section>
 
-            {/* Cloud Partner Ecosystem Section */}
-            <section className="cloud-partner-section">
+                        <section className="cloud-partner-section">
                 <div className="cloud-partner-container">
                     <div className="cloud-partner-left">
                         <h2 className="cloud-partner-title">
@@ -151,8 +149,7 @@ const DataCenter = () => {
                 </div>
             </section>
 
-            {/* High Performance & Physical Infrastructure Section */}
-            <section className="hpc-infrastructure-section">
+                        <section className="hpc-infrastructure-section">
                 <div className="hpc-header">
                     <h2 className="hpc-title">
                         High Performance &<br />
@@ -198,8 +195,7 @@ const DataCenter = () => {
                 </div>
             </section>
 
-            {/* Migration & Managed Operations Section */}
-            <section className="migration-operations-section">
+                        <section className="migration-operations-section">
                 <div className="migration-container">
                     <div className="migration-left">
                         <h2 className="migration-title">
@@ -240,8 +236,7 @@ const DataCenter = () => {
                 </div>
             </section>
 
-            {/* Why Choose Us Section */}
-            <section className="datacenter-why-section">
+                        <section className="datacenter-why-section">
                 <div className="datacenter-why-header">
                     <h2 className="datacenter-why-title">Why Choose Us?</h2>
                     <p className="datacenter-why-subtitle">

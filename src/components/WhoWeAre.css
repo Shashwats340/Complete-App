@@ -16,11 +16,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    perspective: 1200px;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .who-we-are-image-wrapper:hover {
-    transform: translateY(-12px);
+    transform: translateY(-5px);
 }
 
 .who-we-are-image {
@@ -28,11 +29,28 @@
     height: auto;
     max-height: 420px;
     display: block;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-style: preserve-3d;
+    animation: floating-3d 6s infinite ease-in-out;
 }
 
 .who-we-are-image-wrapper:hover .who-we-are-image {
-    transform: scale(1.03);
+    transform: rotateX(6deg) rotateY(-8deg) scale(1.05);
+    box-shadow: 
+        -20px 30px 60px rgba(0, 0, 0, 0.15),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    animation-play-state: paused;
+}
+
+@keyframes floating-3d {
+    0%, 100% {
+        transform: translateY(0) rotateX(0) rotateY(0);
+    }
+    50% {
+        transform: translateY(-15px) rotateX(2deg) rotateY(1deg);
+    }
 }
 
 .who-we-are-content {

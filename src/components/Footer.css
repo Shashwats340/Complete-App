@@ -34,7 +34,6 @@
 .footer-tagline {
     font-size: 1rem;
     color: #155EBA;
-    /* Blue color from design */
     line-height: 1.5;
     max-width: 300px;
 
@@ -101,8 +100,7 @@
 .copyright-text {
     font-size: 0.875rem;
     color: #111827;
-    /* Darker text for copyright */
-}
+    }
 
 .social-icons {
     display: flex;
@@ -117,37 +115,33 @@
     height: 36px;
     border-radius: 50%;
     background-color: #2D3748;
-    /* Sophisticated dark circle */
     color: white;
     transition: background-color 0.3s ease;
 }
 
 .social-icon:hover {
     background-color: #155EBA;
-    /* Blue on hover */
-}
+    }
 
 @media (max-width: 1024px) {
     .footer-content {
-        flex-direction: column;
-        gap: 3rem;
+    flex-direction: column;
+    gap: 3rem;
     }
 
     .footer-links-column {
-        width: 100%;
-        /* Create a grid for links on tablet/mobile if needed, or just stack */
+    width: 100%;
     }
 }
 
 @media (min-width: 640px) and (max-width: 1024px) {
 
-    /* Tablet grid for links */
     .footer-content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-brand-column {
-        grid-column: span 2;
+    grid-column: span 2;
     }
 }

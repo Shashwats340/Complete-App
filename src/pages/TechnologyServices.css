@@ -1,4 +1,3 @@
-/* Technology Services Hero Section */
 .tech-hero-section {
     position: relative;
     min-height: 110vh;
@@ -37,8 +36,7 @@
     align-items: center;
     gap: 1rem;
     padding-top: 2rem;
-    /* Offset for navbar */
-}
+    }
 
 .tech-hero-content .hero-eyebrow {
     font-size: 1.5rem;
@@ -74,12 +72,10 @@
     gap: 0.75rem;
     background-color: #FFFFFF;
     color: #111827;
-    /* Dark almost black text */
     padding: 0.85rem 2rem;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 9999px;
-    /* Pill shape */
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -101,7 +97,6 @@
     transform: translate(3px, -3px);
 }
 
-/* What We Deliver Section */
 .tech-deliver-section {
     padding: 3rem 5% 4rem;
     background-color: #FFFFFF;
@@ -120,7 +115,6 @@
     font-family: inherit;
 }
 
-/* Grid Layout */
 .tech-deliver-grid {
     display: grid;
     grid-template-columns: 1fr 1.25fr 1fr;
@@ -179,7 +173,6 @@
     z-index: 2;
 }
 
-/* Individual Cards Layout and colors */
 .deliver-card-1 {
     grid-column: 1;
     grid-row: 1;
@@ -193,7 +186,6 @@
     min-height: 220px;
 }
 
-/* Card 3 simplified - alignment unified with other cards */
 .deliver-card-3 {
     grid-column: 2;
     grid-row: 1 / span 2;
@@ -206,8 +198,7 @@
     grid-row: 1;
     background-color: #2671c6;
     min-height: 220px;
-    /* Adjusting sizes so it resembles the block composition */
-}
+    }
 
 .deliver-card-5 {
     grid-column: 3;
@@ -215,50 +206,49 @@
     background-color: #176ad1;
 }
 
-/* Responsive Grid Adjustments */
 @media (max-width: 1024px) {
     .tech-deliver-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
     }
 
     .deliver-card-1 {
-        grid-column: 1;
-        grid-row: 1;
+    grid-column: 1;
+    grid-row: 1;
     }
 
     .deliver-card-4 {
-        grid-column: 2;
-        grid-row: 1;
+    grid-column: 2;
+    grid-row: 1;
     }
 
     .deliver-card-3 {
-        grid-column: 1 / span 2;
-        grid-row: 2;
+    grid-column: 1 / span 2;
+    grid-row: 2;
     }
 
     .deliver-card-2 {
-        grid-column: 1;
-        grid-row: 3;
+    grid-column: 1;
+    grid-row: 3;
     }
 
     .deliver-card-5 {
-        grid-column: 2;
-        grid-row: 3;
+    grid-column: 2;
+    grid-row: 3;
     }
 }
 
 @media (max-width: 768px) {
     .tech-hero-content .hero-headline {
-        font-size: 2.5rem;
+    font-size: 2.5rem;
     }
 
     .tech-hero-content .hero-eyebrow {
-        font-size: 1.25rem;
+    font-size: 1.25rem;
     }
 
     .tech-deliver-grid {
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     }
 
     .deliver-card-1,
@@ -266,13 +256,12 @@
     .deliver-card-3,
     .deliver-card-4,
     .deliver-card-5 {
-        grid-column: 1;
-        grid-row: auto;
-        min-height: auto;
+    grid-column: 1;
+    grid-row: auto;
+    min-height: auto;
     }
 }
 
-/* Technologies We Work With Section */
 .tech-stack-section {
     padding: 4rem 5% 6rem;
     background-color: #FFFFFF;
@@ -299,7 +288,6 @@
     font-size: 2.5rem;
     font-weight: 700;
     color: #034EA2;
-    /* Brand blue matching title */
     margin-bottom: 1rem;
     font-family: inherit;
     line-height: 1.25;
@@ -311,7 +299,6 @@
     padding-left: 3rem;
 }
 
-/* Vertical divider line */
 .tech-stack-right::before {
     content: '';
     position: absolute;
@@ -320,8 +307,7 @@
     bottom: 5px;
     width: 1px;
     background-color: #D1D5DB;
-    /* Gray-300 */
-}
+    }
 
 .tech-stack-list {
     display: flex;
@@ -342,7 +328,6 @@
     font-size: 1.5rem;
     font-weight: 600;
     color: #034EA2;
-    /* Matching the title blue */
     margin-bottom: 0.75rem;
     font-family: inherit;
     line-height: 1.2;
@@ -351,34 +336,32 @@
 .tech-stack-item p {
     font-size: 1rem;
     color: #4B5563;
-    /* Gray-600 */
     line-height: 1.6;
     margin: 0;
 }
 
-/* Responsive Grid Adjustments for Tech Stack */
 @media (max-width: 900px) {
     .tech-stack-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
     }
 
     .tech-stack-left {
-        position: static;
-        width: 100%;
+    position: static;
+    width: 100%;
     }
 
     .tech-stack-right {
-        width: 100%;
-        padding-left: 0;
+    width: 100%;
+    padding-left: 0;
     }
 
     .tech-stack-right::before {
-        display: none;
+    display: none;
     }
 
     .tech-stack-item {
-        border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
     }
 }

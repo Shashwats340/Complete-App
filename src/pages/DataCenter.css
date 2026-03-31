@@ -1,7 +1,5 @@
-/* Hero Section */
 .datacenter-hero-section {
     position: relative;
-    /* Use same height/padding logic as Hero.css */
     min-height: 110vh;
     display: flex;
     flex-direction: column;
@@ -23,7 +21,6 @@
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.2);
-    /* Match Hero.css overlay */
     z-index: 1;
 }
 
@@ -39,7 +36,6 @@
     gap: 1.25rem;
 }
 
-/* Typography matching Hero.css classes directly */
 .datacenter-hero-content .hero-eyebrow {
     font-size: 1.5rem;
     font-weight: 500;
@@ -74,12 +70,10 @@
     gap: 0.75rem;
     background-color: #FFFFFF;
     color: #111827;
-    /* Dark almost black text */
     padding: 0.85rem 2rem;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 9999px;
-    /* Pill shape */
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -102,9 +96,8 @@
 }
 
 
-/* Solutions Section (Unchanged) */
 .datacenter-solutions-section {
-    padding: 6rem 5%;
+    padding: 3rem 5%;
     background-color: #FFFFFF;
     text-align: center;
 }
@@ -137,82 +130,98 @@
 }
 
 .datacenter-solution-card {
-    background: #FFFFFF;
-    border: 1px solid #E5E7EB;
-    border-radius: 16px;
-    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
     text-align: left;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1rem;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
 }
 
 .datacenter-solution-card:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    border-color: #dbeafe;
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
+
+/* 9-Step Gradient Progression */
+.datacenter-solution-card.card-1 { background: linear-gradient(135deg, #0080FF 0%, #0059B3 100%); }
+.datacenter-solution-card.card-2 { background: linear-gradient(135deg, #0070E6 0%, #004D99 100%); }
+.datacenter-solution-card.card-3 { background: linear-gradient(135deg, #0060CC 0%, #00448A 100%); }
+.datacenter-solution-card.card-4 { background: linear-gradient(135deg, #0050B3 0%, #003B77 100%); }
+.datacenter-solution-card.card-5 { background: linear-gradient(135deg, #004494 0%, #003366 100%); }
+.datacenter-solution-card.card-6 { background: linear-gradient(135deg, #003C80 0%, #002D59 100%); }
+.datacenter-solution-card.card-7 { background: linear-gradient(135deg, #003366 0%, #002244 100%); }
+.datacenter-solution-card.card-8 { background: linear-gradient(135deg, #002D59 0%, #001B3A 100%); }
+.datacenter-solution-card.card-9 { background: linear-gradient(135deg, #002244 0%, #001122 100%); }
 
 .solution-icon-box {
     width: 56px;
     height: 56px;
     background-color: #FFFFFF;
-    border: 1px solid #E5E7EB;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.datacenter-solution-card:hover .solution-icon-box {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .solution-card-title {
     font-size: 1.25rem;
-    font-weight: 600;
-    color: #111827;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+.solution-card-description {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-.solution-card-description {
-    font-size: 0.95rem;
-    color: #6B7280;
-    line-height: 1.5;
-    margin: 0;
-}
-
 @media (max-width: 1024px) {
     .datacenter-solutions-grid {
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .hero-headline {
-        font-size: 2.5rem;
-        /* Match Home page mobile size */
+    font-size: 2.5rem;
     }
 
     .hero-subheadline {
-        font-size: 1rem;
+    font-size: 1rem;
     }
 
-    /* Reuse Home page mobile styles logic */
     .datacenter-hero-content {
-        gap: 1.5rem;
+    gap: 1.5rem;
     }
 
     .datacenter-solutions-grid {
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     }
 
     .datacenter-solutions-title {
-        font-size: 2rem;
+    font-size: 2rem;
     }
 }
 
-/* Cloud Partner Ecosystem Section */
 .cloud-partner-section {
     padding: 6rem 5%;
     background-color: #FFFFFF;
@@ -332,30 +341,28 @@
 
 @media (max-width: 768px) {
     .cloud-partner-container {
-        flex-direction: column;
-        gap: 2rem;
+    flex-direction: column;
+    gap: 2rem;
     }
 
     .cloud-partner-divider {
-        display: none;
+    display: none;
     }
 
     .cloud-partner-left {
-        max-width: 100%;
-        position: static;
+    max-width: 100%;
+    position: static;
     }
 
     .cloud-partner-title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
     }
 }
 
-/* High Performance & Physical Infrastructure Section */
 .hpc-infrastructure-section {
     padding: 3rem 4%;
     background: linear-gradient(135deg, #014C97 0%, #2D7BE8 50%, #3599FC 100%);
-    /* Blue gradient from Services */
     color: #FFFFFF;
     text-align: center;
 }
@@ -383,7 +390,6 @@
     justify-content: center;
     align-items: flex-start;
     gap: 0;
-    /* Dividers handle spacing */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -431,7 +437,6 @@
     min-height: 150px;
 }
 
-/* Migration & Managed Operations Section */
 .migration-operations-section {
     padding: 6rem 5%;
     background-color: #FFFFFF;
@@ -519,30 +524,29 @@
 
 @media (max-width: 768px) {
     .hpc-grid {
-        flex-direction: column;
-        gap: 3rem;
+    flex-direction: column;
+    gap: 3rem;
     }
 
     .hpc-card-divider {
-        display: none;
+    display: none;
     }
 
     .migration-container {
-        flex-direction: column;
-        gap: 3rem;
+    flex-direction: column;
+    gap: 3rem;
     }
 
     .migration-divider {
-        display: none;
+    display: none;
     }
 
     .migration-left {
-        max-width: 100%;
-        position: static;
+    max-width: 100%;
+    position: static;
     }
 }
 
-/* Why Choose Us Section */
 .datacenter-why-section {
     padding: 2rem 5% 6rem;
     background-color: #FFFFFF;
@@ -593,26 +597,21 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Specific Card Gradients - Light to Dark */
 .datacenter-why-card.card-1 {
     background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-    /* Bright Blue */
-}
+    }
 
 .datacenter-why-card.card-2 {
     background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
-    /* Medium Blue */
-}
+    }
 
 .datacenter-why-card.card-3 {
     background: linear-gradient(135deg, #004494 0%, #003366 100%);
-    /* Dark Blue */
-}
+    }
 
 .datacenter-why-card.card-4 {
     background: linear-gradient(135deg, #003366 0%, #002244 100%);
-    /* Deep Navy */
-}
+    }
 
 .why-icon-wrapper {
     background-color: #FFFFFF;
@@ -626,10 +625,8 @@
 }
 
 .why-icon {
-    /* Color handled by parent card or specific override, but sticking to logic */
     color: #034EA2;
-    /* Consistent brand blue for icons inside white box */
-}
+    }
 
 .why-card-title {
     font-size: 1.25rem;
@@ -647,12 +644,12 @@
 
 @media (max-width: 1024px) {
     .datacenter-why-grid {
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .datacenter-why-grid {
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     }
 }

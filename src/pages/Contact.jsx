@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Mail, MapPin, Instagram, Linkedin, Facebook } from 'lucide-react';
-import transformImg from '../assets/transform.png';
 import usaImg from '../assets/USA 2.png';
 import londonImg from '../assets/London 2.png';
 import indiaImg from '../assets/India 2.png';
