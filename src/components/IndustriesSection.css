@@ -53,9 +53,8 @@
     border-radius: 12px;
     overflow: hidden;
     position: relative;
-    cursor: pointer;
+    cursor: default;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, background-color 0.3s ease;
     border: 1px solid #f1f5f9;
 }
 
@@ -64,9 +63,7 @@
     border: none;
 }
 
-.industry-card:hover {
-    transform: translateY(-5px);
-}
+/* Hover reveal effect remains for informational content, decorative translate removed */
 
 .card-top {
     padding: 1.5rem;
@@ -228,9 +225,7 @@
     }
 }
 
-.industry-card:hover {
-    animation: card-glow 2s infinite ease-in-out;
-}
+/* Decorative glow removed */
 
 @media (max-width: 1024px) {
     .industries-title {

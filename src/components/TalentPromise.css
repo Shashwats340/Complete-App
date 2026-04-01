@@ -58,10 +58,7 @@
     z-index: 1;
 }
 
-.promise-card-bento:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 50, 150, 0.3);
-}
+/* Hover effects removed for non-interactive cards */
 
 /* Specific Grid Placements */
 .bento-large-left {

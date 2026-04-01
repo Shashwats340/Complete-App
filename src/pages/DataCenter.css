@@ -20,7 +20,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -82,6 +82,7 @@
 
 .datacenter-hero-content .hero-cta-button:hover {
     background-color: #f8fafc;
+    color: #014C97;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
@@ -145,10 +146,7 @@
     cursor: pointer;
 }
 
-.datacenter-solution-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
+/* .datacenter-solution-card:hover removed */
 
 /* 9-Step Gradient Progression */
 .datacenter-solution-card.card-1 { background: linear-gradient(135deg, #0080FF 0%, #0059B3 100%); }
@@ -306,8 +304,7 @@
     color: #FFFFFF;
 }
 
-.platform-icon-wrapper.aws {
-    background-color: #232F3E;
+.platform-icon-wrapper.aws { background-color: #0078D4;
 }
 
 .platform-icon-wrapper.azure {
@@ -592,10 +589,7 @@
     transition: all 0.3s ease;
 }
 
-.datacenter-why-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+/* .datacenter-why-card:hover removed */
 
 .datacenter-why-card.card-1 {
     background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
@@ -653,3 +647,4 @@
     grid-template-columns: 1fr;
     }
 }
+

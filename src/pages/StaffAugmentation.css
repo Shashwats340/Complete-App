@@ -25,7 +25,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -40,7 +40,7 @@
     align-items: center;
     gap: 1rem;
     padding-top: 2rem;
-    }
+}
 
 .staff-hero-content .hero-eyebrow {
     font-size: 1.5rem;
@@ -88,6 +88,7 @@
 
 .staff-hero-content .hero-cta-button:hover {
     background-color: #f8fafc;
+    color: #014C97;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
@@ -103,11 +104,11 @@
 
 @media (max-width: 768px) {
     .staff-hero-content .hero-headline {
-    font-size: 2.5rem;
+        font-size: 2.5rem;
     }
 
     .staff-hero-content .hero-eyebrow {
-    font-size: 1.25rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -116,7 +117,7 @@
     background-color: #F8FAFC;
     text-align: center;
     overflow: hidden;
-    }
+}
 
 .staff-experts-header {
     display: flex;
@@ -136,7 +137,7 @@
 .staff-header-content .staff-section-title {
     margin-bottom: 0.5rem;
     color: #2563EB;
-    }
+}
 
 .staff-header-content .staff-section-subtitle {
     margin: 0;
@@ -148,7 +149,7 @@
     display: flex;
     gap: 1rem;
     padding-bottom: 0.5rem;
-    }
+}
 
 .staff-scroll-btn {
     width: 3rem;
@@ -179,13 +180,13 @@
 
 @media (max-width: 768px) {
     .staff-experts-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
     }
 
     .staff-header-controls {
-    align-self: flex-end;
+        align-self: flex-end;
     }
 }
 
@@ -210,11 +211,11 @@
 
 @keyframes marquee {
     0% {
-    transform: translateX(0);
+        transform: translateX(0);
     }
 
     100% {
-    transform: translateX(calc(-50% - 1rem));
+        transform: translateX(calc(-50% - 1rem));
     }
 }
 
@@ -234,12 +235,9 @@
     flex-shrink: 0;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    }
-
-.staff-expert-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 50, 150, 0.3);
 }
+
+/* .staff-expert-card:hover removed */
 
 .staff-expert-icon {
     width: 3rem;
@@ -254,7 +252,7 @@
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     border: none;
     filter: none;
-    }
+}
 
 .staff-expert-icon svg {
     width: 20px;
@@ -300,25 +298,25 @@
 
 @media (max-width: 1200px) {
     .staff-expert-card {
-    min-width: calc(33.333% - 1.33rem);
+        min-width: calc(33.333% - 1.33rem);
     }
 }
 
 @media (max-width: 900px) {
     .staff-expert-card {
-    min-width: calc(50% - 1rem);
+        min-width: calc(50% - 1rem);
     }
 }
 
 @media (max-width: 768px) {
     .staff-expert-card {
-    padding: 1.5rem;
+        padding: 1.5rem;
     }
 }
 
 @media (max-width: 600px) {
     .staff-expert-card {
-    min-width: 85%;
+        min-width: 85%;
     }
 }
 
@@ -396,7 +394,7 @@
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #0056B3;
-    }
+}
 
 .staff-why-item p {
     font-size: 0.95rem;
@@ -407,35 +405,35 @@
 
 @media (max-width: 1024px) {
     .staff-why-grid {
-    grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .staff-why-item {
-    border: none !important;
+        border: none !important;
     }
 
     .staff-why-item:nth-child(odd) {
-    border-right: 1px solid #DDF2FF !important;
+        border-right: 1px solid #DDF2FF !important;
     }
 
     .staff-why-item:nth-child(1),
     .staff-why-item:nth-child(2),
     .staff-why-item:nth-child(3),
     .staff-why-item:nth-child(4) {
-    border-bottom: 1px solid #DDF2FF !important;
+        border-bottom: 1px solid #DDF2FF !important;
     }
 }
 
 @media (max-width: 600px) {
     .staff-why-grid {
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
 
     .staff-why-item {
-    border: none !important;
+        border: none !important;
     }
 
     .staff-why-item:not(:last-child) {
-    border-bottom: 1px solid #DDF2FF !important;
+        border-bottom: 1px solid #DDF2FF !important;
     }
 }

@@ -31,7 +31,6 @@
     flex-direction: column;
     justify-content: flex-start;
     font-family: inherit;
-    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
@@ -49,10 +48,7 @@
     z-index: 1;
 }
 
-.domain-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
+/* Hover effect removed for non-interactive card */
 
 .domain-card-title {
     font-size: 1.35rem;

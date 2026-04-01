@@ -98,6 +98,7 @@
 
 .careers-btn-primary:hover {
     background-color: #f8fafc;
+    color: #014C97;
     transform: translateY(-2px);
 }
 
@@ -354,17 +355,9 @@
     display: none;
     }
 
-.team-img {
-    flex: 0 0 300px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 1rem;
-    transition: transform 0.3s ease;
-}
+.team-img { flex: 0 0 300px; height: 250px; object-fit: cover; border-radius: 1rem; }
 
-.team-img:hover {
-    transform: scale(1.02);
-}
+
 
 .carousel-arrow {
     position: absolute;
@@ -616,25 +609,9 @@
     display: none;
 }
 
-.testimonial-card {
-    flex: 0 0 320px;
-    background: #FFFFFF;
-    padding: 2.5rem 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    transition: all 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
-    border: 1px solid #F3F4F6;
-    scroll-snap-align: start;
-}
+.testimonial-card { flex: 0 0 320px; background: #FFFFFF; padding: 2.5rem 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); display: flex; flex-direction: column; gap: 1.5rem; text-align: left; border: 1px solid #F3F4F6; scroll-snap-align: start; }
 
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
+
 
 .testimonial-stars {
     display: flex;
@@ -694,4 +671,5 @@
     gap: 1.25rem;
     }
 }
+
 
